@@ -1,0 +1,10 @@
+{
+  "name": "rodrigooler",
+  "version": "0.0.1",
+  "author": "Rodrigo Oler <https://github.com/rodrigooler>",
+  "license": "MIT",
+  "scripts": {
+    "deploy": "now ls && now remove oler --yes && now && now alias",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  }
+}

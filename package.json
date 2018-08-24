@@ -4,7 +4,7 @@
   "author": "Rodrigo Oler <https://github.com/rodrigooler>",
   "license": "MIT",
   "scripts": {
-    "deploy": "now ls && now remove oler --yes && now && now alias",
+    "deploy": "now ls && now rm oler --yes && now --public && now alias",
     "test": "echo \"Error: no test specified\" && exit 1"
   }
 }

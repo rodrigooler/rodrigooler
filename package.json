@@ -10,7 +10,9 @@
   },
   "devDependencies": {
     "@babel/core": "7.0.1",
-    "babel-plugin-root-import": "^6.1.0"
+    "babel-plugin-root-import": "^6.1.0",
+    "tslint": "^5.11.0",
+    "typescript": "^3.0.3"
   },
   "license": "MIT",
   "scripts": {

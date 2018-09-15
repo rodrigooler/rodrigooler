@@ -23,6 +23,12 @@
     "npm": "6.4.1"
   },
   "license": "MIT",
+  "lint-staged": {
+    "*.{js,jsx,ts,tsx}": [
+      "prettier --write",
+      "git add"
+    ]
+  },
   "scripts": {
     "build": "next build src",
     "dev": "next src",

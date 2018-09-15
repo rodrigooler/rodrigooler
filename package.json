@@ -32,6 +32,7 @@
   },
   "scripts": {
     "build": "next build src",
+    "clean": "rm -rf src/.next",
     "dev": "next src",
     "lint": "tslint -p .",
     "precommit": "lint-staged",

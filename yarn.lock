@@ -148,6 +148,10 @@
   dependencies:
     "@babel/types" "^7.0.0"
 
+"@babel/helper-plugin-utils@7.0.0-beta.42":
+  version "7.0.0-beta.42"
+  resolved "http://registry.npmjs.org/@babel/helper-plugin-utils/-/helper-plugin-utils-7.0.0-beta.42.tgz#9aa8b3e5dc72abea6b4f686712a7363cb29ea057"
+
 "@babel/helper-plugin-utils@^7.0.0":
   version "7.0.0"
   resolved "https://registry.yarnpkg.com/@babel/helper-plugin-utils/-/helper-plugin-utils-7.0.0.tgz#bbb3fbee98661c569034237cc03967ba99b4f250"
@@ -308,6 +312,12 @@
   resolved "https://registry.yarnpkg.com/@babel/plugin-syntax-optional-catch-binding/-/plugin-syntax-optional-catch-binding-7.0.0.tgz#886f72008b3a8b185977f7cb70713b45e51ee475"
   dependencies:
     "@babel/helper-plugin-utils" "^7.0.0"
+
+"@babel/plugin-syntax-typescript@7.0.0-beta.42":
+  version "7.0.0-beta.42"
+  resolved "http://registry.npmjs.org/@babel/plugin-syntax-typescript/-/plugin-syntax-typescript-7.0.0-beta.42.tgz#ffc42945ca15e5ab369de6b9f5d9324499c623cf"
+  dependencies:
+    "@babel/helper-plugin-utils" "7.0.0-beta.42"
 
 "@babel/plugin-transform-arrow-functions@^7.0.0":
   version "7.0.0"
@@ -525,6 +535,13 @@
   dependencies:
     "@babel/helper-plugin-utils" "^7.0.0"
 
+"@babel/plugin-transform-typescript@7.0.0-beta.42":
+  version "7.0.0-beta.42"
+  resolved "http://registry.npmjs.org/@babel/plugin-transform-typescript/-/plugin-transform-typescript-7.0.0-beta.42.tgz#e3a2d46014fd26e0729fd574b521fca4eb21144f"
+  dependencies:
+    "@babel/helper-plugin-utils" "7.0.0-beta.42"
+    "@babel/plugin-syntax-typescript" "7.0.0-beta.42"
+
 "@babel/plugin-transform-unicode-regex@^7.0.0":
   version "7.0.0"
   resolved "https://registry.yarnpkg.com/@babel/plugin-transform-unicode-regex/-/plugin-transform-unicode-regex-7.0.0.tgz#c6780e5b1863a76fe792d90eded9fcd5b51d68fc"
@@ -588,6 +605,13 @@
     "@babel/plugin-transform-react-jsx" "^7.0.0"
     "@babel/plugin-transform-react-jsx-self" "^7.0.0"
     "@babel/plugin-transform-react-jsx-source" "^7.0.0"
+
+"@babel/preset-typescript@7.0.0-beta.42":
+  version "7.0.0-beta.42"
+  resolved "http://registry.npmjs.org/@babel/preset-typescript/-/preset-typescript-7.0.0-beta.42.tgz#adb91d387a6eee7b45918de544d6c8fa122c2564"
+  dependencies:
+    "@babel/helper-plugin-utils" "7.0.0-beta.42"
+    "@babel/plugin-transform-typescript" "7.0.0-beta.42"
 
 "@babel/runtime-corejs2@7.0.0":
   version "7.0.0"
@@ -767,6 +791,12 @@
     "@webassemblyjs/ast" "1.5.13"
     "@webassemblyjs/wast-parser" "1.5.13"
     long "^3.2.0"
+
+"@zeit/next-typescript@^1.1.0":
+  version "1.1.0"
+  resolved "https://registry.yarnpkg.com/@zeit/next-typescript/-/next-typescript-1.1.0.tgz#57a45c85c336fee8d71c1bd966195565016932b2"
+  dependencies:
+    "@babel/preset-typescript" "7.0.0-beta.42"
 
 abbrev@1:
   version "1.1.1"

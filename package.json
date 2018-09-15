@@ -2,7 +2,7 @@
   "name": "rodrigooler",
   "version": "0.0.1",
   "dependencies": {
-    "next": "6.1.2",
+    "next": "7.0.0-canary.16",
     "react": "16.5.1",
     "react-dom": "16.5.1"
   },

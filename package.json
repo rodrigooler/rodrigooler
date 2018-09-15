@@ -1,13 +1,15 @@
 {
-  "name": "create-next-example-app",
-  "scripts": {
-    "dev": "next src",
-    "build": "next build src",
-    "start": "next start src"
-  },
+  "name": "rodrigooler",
+  "version": "0.0.1",
   "dependencies": {
-    "next": "^6.1.2",
-    "react": "^16.5.1",
-    "react-dom": "^16.5.1"
+    "next": "6.1.2",
+    "react": "16.5.1",
+    "react-dom": "16.5.1"
+  },
+  "license": "MIT",
+  "scripts": {
+    "build": "next build src",
+    "dev": "next src",
+    "start": "next start src"
   }
 }

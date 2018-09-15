@@ -18,6 +18,10 @@
     "tslint-config-prettier": "1.15.0",
     "typescript": "3.0.3"
   },
+  "engines": {
+    "node": "10.10.0",
+    "npm": "6.4.1"
+  },
   "license": "MIT",
   "scripts": {
     "build": "next build src",

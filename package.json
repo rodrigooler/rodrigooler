@@ -32,6 +32,9 @@
   "scripts": {
     "build": "next build src",
     "dev": "next src",
+    "lint": "tslint -p .",
+    "precommit": "lint-staged",
+    "prettier": "prettier --write '{.,__tests__,src/**}/*.{js,jsx,ts,tsx}'",
     "start": "next start src"
   }
 }

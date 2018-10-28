@@ -1,7 +1,8 @@
-import Avatar from '../atoms/Avatar'
+import { Avatar, Menu } from '~/src/components'
 
 export default () => (
   <>
-    <Avatar bgImg="https://avatars2.githubusercontent.com/u/5496931?s=460&v=4" />
+    <Menu />
+    <Avatar />
   </>
 )

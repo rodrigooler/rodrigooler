@@ -1,0 +1,9 @@
+{
+	"plugins": [
+		"babel-plugin-root-import"
+	],
+	"presets": [
+		"next/babel",
+		"@zeit/next-typescript/babel"
+	]
+}

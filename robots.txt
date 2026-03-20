@@ -1,0 +1,4 @@
+User-agent: *
+Allow: /
+
+Sitemap: https://oler.pages.dev/sitemap.xml

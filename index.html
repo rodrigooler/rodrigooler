@@ -1,0 +1,1511 @@
+<!doctype html>
+<html lang="pt-BR">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Rodrigo Oler — Senior Engineer · 3x Co-Founder · 2x CTO</title>
+    <meta name="description" content="Rodrigo Oler is a Senior Software Engineer, 3x Co-Founder, and 2x CTO building scalable products in TypeScript, Next.js, Angular, Node.js, AWS, AI, and Web3." />
+    <meta name="keywords" content="Rodrigo Oler, Senior Software Engineer, 3x Co-Founder, 2x CTO, Founding Engineer, TypeScript, Next.js, Angular, Node.js, AWS, AI, Web3, SaaS, fintech, blockchain, open source" />
+    <meta name="author" content="Rodrigo Oler" />
+    <meta name="robots" content="index,follow,max-image-preview:large,max-snippet:-1,max-video-preview:-1" />
+    <link rel="canonical" href="https://oler.pages.dev/" />
+    <link rel="icon" type="image/svg+xml" href="og-image.svg" />
+    <meta name="theme-color" content="#04060d" />
+    <meta property="og:type" content="website" />
+    <meta property="og:site_name" content="Rodrigo Oler" />
+    <meta property="og:title" content="Rodrigo Oler — Senior Engineer · 3x Co-Founder · 2x CTO" />
+    <meta property="og:description" content="Senior Software Engineer, 3x Co-Founder, and 2x CTO building scalable products in TypeScript, Next.js, Angular, Node.js, AWS, AI, and Web3." />
+    <meta property="og:url" content="https://oler.pages.dev/" />
+    <meta property="og:image" content="https://oler.pages.dev/og-image.svg" />
+    <meta property="og:image:alt" content="Rodrigo Oler — Senior Engineer · 3x Co-Founder · 2x CTO" />
+    <meta name="twitter:card" content="summary_large_image" />
+    <meta name="twitter:title" content="Rodrigo Oler — Senior Engineer · 3x Co-Founder · 2x CTO" />
+    <meta name="twitter:description" content="Senior Software Engineer, 3x Co-Founder, and 2x CTO building scalable products in TypeScript, Next.js, Angular, Node.js, AWS, AI, and Web3." />
+    <meta name="twitter:image" content="https://oler.pages.dev/og-image.svg" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link href="https://fonts.googleapis.com/css2?family=Syne:wght@400;500;600;700;800&family=JetBrains+Mono:wght@300;400;500;600&family=Inter:wght@300;400;500&display=swap" rel="stylesheet" />
+    <script type="application/ld+json">
+      {
+        "@context": "https://schema.org",
+        "@graph": [
+          {
+            "@type": "Person",
+            "@id": "https://oler.pages.dev/#person",
+            "name": "Rodrigo Oler",
+            "alternateName": "Rodrigo Oler Batista Silva",
+            "jobTitle": "Senior Software Engineer",
+            "description": "Senior Software Engineer, 3x Co-Founder, and 2x CTO building scalable products in TypeScript, Next.js, Angular, Node.js, AWS, AI, and Web3.",
+            "url": "https://oler.pages.dev/",
+            "image": "https://oler.pages.dev/og-image.svg",
+            "sameAs": [
+              "https://github.com/rodrigooler",
+              "https://www.linkedin.com/in/rodrigooler/"
+            ],
+            "knowsAbout": [
+              "TypeScript",
+              "Next.js",
+              "Angular",
+              "Node.js",
+              "NestJS",
+              "AWS",
+              "PostgreSQL",
+              "CI/CD",
+              "AI",
+              "Web3",
+              "Open Source"
+            ]
+          },
+          {
+            "@type": "WebSite",
+            "@id": "https://oler.pages.dev/#website",
+            "url": "https://oler.pages.dev/",
+            "name": "Rodrigo Oler",
+            "description": "Senior Software Engineer, 3x Co-Founder, and 2x CTO building scalable products in TypeScript, Next.js, Angular, Node.js, AWS, AI, and Web3.",
+            "publisher": {
+              "@id": "https://oler.pages.dev/#person"
+            },
+            "inLanguage": "pt-BR"
+          },
+          {
+            "@type": "WebPage",
+            "@id": "https://oler.pages.dev/#webpage",
+            "url": "https://oler.pages.dev/",
+            "name": "Rodrigo Oler — Senior Engineer · 3x Co-Founder · 2x CTO",
+            "description": "Senior Software Engineer, 3x Co-Founder, and 2x CTO building scalable products in TypeScript, Next.js, Angular, Node.js, AWS, AI, and Web3.",
+            "isPartOf": {
+              "@id": "https://oler.pages.dev/#website"
+            },
+            "about": {
+              "@id": "https://oler.pages.dev/#person"
+            },
+            "primaryImageOfPage": "https://oler.pages.dev/og-image.svg",
+            "inLanguage": "pt-BR"
+          }
+        ]
+      }
+    </script>
+    <style>
+      :root {
+        --bg: #04060d;
+        --bg-2: #080c18;
+        --neon: #00ffc8;
+        --neon-dim: rgba(0,255,200,0.12);
+        --neon-2: #6e4dff;
+        --magenta: #ff2d9b;
+        --amber: #ffb800;
+        --text: #e8eeff;
+        --muted: #6e7a9f;
+        --muted-2: #3d4563;
+        --card: rgba(10, 14, 28, 0.85);
+        --border: rgba(255,255,255,0.06);
+        --border-neon: rgba(0,255,200,0.2);
+        --glow: 0 0 40px rgba(0,255,200,0.15);
+        color-scheme: dark;
+      }
+      * { box-sizing: border-box; margin: 0; padding: 0; }
+      html { scroll-behavior: smooth; }
+
+      body {
+        font-family: 'Inter', system-ui, sans-serif;
+        background: var(--bg);
+        color: var(--text);
+        min-height: 100vh;
+        overflow-x: hidden;
+      }
+
+      a { color: inherit; text-decoration: none; }
+
+      /* ─── BACKGROUND ─── */
+      .bg-layer {
+        position: fixed; inset: 0; z-index: -1; pointer-events: none;
+      }
+      .bg-grid {
+        position: absolute; inset: 0;
+        background-image:
+          linear-gradient(rgba(0,255,200,0.025) 1px, transparent 1px),
+          linear-gradient(90deg, rgba(0,255,200,0.025) 1px, transparent 1px);
+        background-size: 60px 60px;
+      }
+      .bg-noise {
+        position: absolute; inset: 0;
+        opacity: 0.04;
+        background-image: url("data:image/svg+xml,%3Csvg viewBox='0 0 256 256' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.9' numOctaves='4' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23n)'/%3E%3C/svg%3E");
+        background-size: 200px;
+      }
+      .bg-radial {
+        position: absolute;
+        width: 900px; height: 900px;
+        background: radial-gradient(circle, rgba(110,77,255,0.12) 0%, transparent 65%);
+        top: -200px; right: -200px;
+        border-radius: 50%;
+      }
+      .bg-radial-2 {
+        position: absolute;
+        width: 600px; height: 600px;
+        background: radial-gradient(circle, rgba(0,255,200,0.07) 0%, transparent 60%);
+        bottom: 20%; left: -100px;
+        border-radius: 50%;
+      }
+      .scanlines {
+        position: absolute; inset: 0;
+        background: repeating-linear-gradient(transparent, transparent 2px, rgba(0,0,0,0.08) 3px);
+        opacity: 0.5;
+      }
+
+      /* ─── HEADER ─── */
+      .header {
+        position: fixed; top: 0; left: 0; right: 0;
+        z-index: 100;
+        display: flex; align-items: center; justify-content: space-between;
+        padding: 0 5vw;
+        height: 64px;
+        background: rgba(4,6,13,0.8);
+        backdrop-filter: blur(16px);
+        border-bottom: 1px solid var(--border);
+      }
+      .logo {
+        font-family: 'JetBrains Mono', monospace;
+        font-weight: 600; font-size: 1.05rem;
+        color: var(--neon);
+        letter-spacing: 1px;
+      }
+      .logo span { color: var(--muted); }
+      .nav {
+        display: flex; gap: 28px;
+        font-size: 0.88rem; color: var(--muted);
+        font-family: 'JetBrains Mono', monospace;
+      }
+      .nav a { transition: color 0.15s; }
+      .nav a:hover { color: var(--text); }
+      .header-cta {
+        display: flex; align-items: center; gap: 12px;
+      }
+      .btn-cv {
+        padding: 8px 18px;
+        border: 1px solid var(--border-neon);
+        border-radius: 6px;
+        background: var(--neon-dim);
+        color: var(--neon);
+        font-family: 'JetBrains Mono', monospace;
+        font-size: 0.82rem; font-weight: 500;
+        letter-spacing: 1px;
+        transition: all 0.2s;
+      }
+      .btn-cv:hover { background: rgba(0,255,200,0.2); box-shadow: var(--glow); }
+
+      /* ─── HERO ─── */
+      .hero {
+        min-height: 100vh;
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        gap: 0;
+        padding: 64px 0 0;
+      }
+      .hero-left {
+        display: flex; flex-direction: column; justify-content: center;
+        padding: 80px 5vw 80px 8vw;
+        position: relative;
+      }
+      .hero-right {
+        display: flex; flex-direction: column; justify-content: center; align-items: flex-start;
+        padding: 80px 8vw 80px 5vw;
+        position: relative;
+      }
+
+      .status-dot {
+        display: inline-flex; align-items: center; gap: 8px;
+        font-family: 'JetBrains Mono', monospace;
+        font-size: 0.78rem; color: var(--neon);
+        margin-bottom: 24px;
+        padding: 6px 14px;
+        border: 1px solid var(--border-neon);
+        border-radius: 100px;
+        background: var(--neon-dim);
+        width: fit-content;
+      }
+      .status-dot::before {
+        content: '';
+        width: 7px; height: 7px;
+        border-radius: 50%;
+        background: var(--neon);
+        box-shadow: 0 0 8px var(--neon);
+        animation: pulse 2s ease-in-out infinite;
+      }
+      @keyframes pulse {
+        0%,100% { opacity: 1; transform: scale(1); }
+        50% { opacity: 0.6; transform: scale(0.8); }
+      }
+
+      .hero-name {
+        font-family: 'Syne', sans-serif;
+        font-weight: 800;
+        font-size: clamp(3rem, 5.5vw, 5rem);
+        line-height: 0.95;
+        letter-spacing: -0.03em;
+        margin-bottom: 14px;
+      }
+      .hero-name .line-2 {
+        color: var(--neon);
+        display: block;
+        -webkit-text-stroke: 1px var(--neon);
+      }
+
+      .hero-role {
+        font-family: 'JetBrains Mono', monospace;
+        font-size: 0.9rem;
+        color: var(--muted);
+        margin-bottom: 28px;
+        letter-spacing: 0.5px;
+      }
+      .hero-role span { color: var(--magenta); }
+
+      .hero-desc {
+        font-size: 1rem;
+        line-height: 1.7;
+        color: var(--muted);
+        max-width: 480px;
+        margin-bottom: 36px;
+      }
+
+      .hero-actions {
+        display: flex; gap: 14px; flex-wrap: wrap;
+        margin-bottom: 40px;
+      }
+      .btn {
+        padding: 12px 24px; border-radius: 8px;
+        font-size: 0.9rem; font-weight: 500;
+        transition: all 0.2s;
+        cursor: pointer;
+        display: inline-flex; align-items: center; gap: 8px;
+      }
+      .btn-primary {
+        background: var(--neon);
+        color: #04060d;
+        font-weight: 700;
+        border: none;
+      }
+      .btn-primary:hover { box-shadow: 0 0 30px rgba(0,255,200,0.4); transform: translateY(-1px); }
+      .btn-ghost {
+        background: transparent;
+        border: 1px solid var(--border);
+        color: var(--muted);
+      }
+      .btn-ghost:hover { border-color: var(--muted-2); color: var(--text); }
+
+      .hero-meta {
+        display: flex; gap: 24px; flex-wrap: wrap;
+      }
+      .meta-item {
+        display: flex; flex-direction: column;
+      }
+      .meta-num {
+        font-family: 'Syne', sans-serif;
+        font-size: 1.8rem; font-weight: 800;
+        color: var(--text);
+      }
+      .meta-label {
+        font-family: 'JetBrains Mono', monospace;
+        font-size: 0.72rem;
+        color: var(--muted);
+        text-transform: uppercase; letter-spacing: 1px;
+      }
+      .meta-sep { color: var(--muted-2); }
+
+      .hero-stack-line {
+        display: flex;
+        flex-wrap: wrap;
+        gap: 8px;
+        margin-top: 18px;
+        max-width: 520px;
+      }
+      .hero-stack-chip {
+        font-family: 'JetBrains Mono', monospace;
+        font-size: 0.72rem;
+        letter-spacing: 0.8px;
+        color: var(--text);
+        border: 1px solid var(--border);
+        background: rgba(255,255,255,0.03);
+        padding: 6px 10px;
+        border-radius: 999px;
+      }
+
+      /* ─── AVATAR ─── */
+      .avatar-wrap {
+        display: flex; align-items: center; gap: 16px;
+        margin-bottom: 28px;
+      }
+      .avatar-ring {
+        position: relative;
+        width: 72px; height: 72px;
+        flex-shrink: 0;
+      }
+      .avatar-ring::before {
+        content: '';
+        position: absolute; inset: -3px;
+        border-radius: 50%;
+        background: conic-gradient(var(--neon), var(--neon-2), var(--magenta), var(--neon));
+        animation: spin 4s linear infinite;
+        z-index: 0;
+      }
+      @keyframes spin { to { transform: rotate(360deg); } }
+      .avatar-ring::after {
+        content: '';
+        position: absolute; inset: -1px;
+        border-radius: 50%;
+        background: var(--bg);
+        z-index: 1;
+      }
+      .avatar-img {
+        position: relative; z-index: 2;
+        width: 100%; height: 100%;
+        border-radius: 50%;
+        object-fit: cover;
+        display: block;
+      }
+      .avatar-info {}
+      .avatar-handle {
+        font-family: 'JetBrains Mono', monospace;
+        font-size: 0.82rem;
+        color: var(--neon);
+        margin-bottom: 3px;
+      }
+      .avatar-since {
+        font-family: 'JetBrains Mono', monospace;
+        font-size: 0.72rem;
+        color: var(--muted);
+      }
+
+      /* ─── TERMINAL ─── */
+      .terminal-wrap {
+        width: 100%;
+        max-width: 520px;
+      }
+      .terminal {
+        border-radius: 12px;
+        background: rgba(4, 7, 18, 0.97);
+        border: 1px solid var(--border);
+        box-shadow: 0 40px 80px rgba(0,0,0,0.7),
+                    0 0 0 1px rgba(255,255,255,0.03) inset,
+                    0 0 60px rgba(0,255,200,0.04);
+        overflow: hidden;
+        margin-bottom: 16px;
+      }
+      .t-header {
+        display: flex; align-items: center; gap: 8px;
+        padding: 11px 16px;
+        background: rgba(255,255,255,0.025);
+        border-bottom: 1px solid var(--border);
+        user-select: none;
+      }
+      .t-dots { display: flex; gap: 6px; }
+      .t-dot { width: 11px; height: 11px; border-radius: 50%; }
+      .t-dot.r { background: #ff5f57; }
+      .t-dot.y { background: #febc2e; }
+      .t-dot.g { background: #28c840; }
+      .t-title {
+        font-family: 'JetBrains Mono', monospace;
+        font-size: 0.78rem;
+        color: var(--muted);
+        margin-left: 8px;
+      }
+      .t-body {
+        padding: 18px 20px 20px;
+        font-family: 'JetBrains Mono', monospace;
+        font-size: 0.82rem;
+        line-height: 1.75;
+        min-height: 240px;
+        overflow: hidden;
+      }
+      /* terminal line types */
+      .tl-prompt { color: #4a5278; }
+      .tl-prompt-user { color: var(--neon); }
+      .tl-prompt-sep { color: var(--muted-2); }
+      .tl-prompt-path { color: var(--neon-2); }
+      .tl-cmd { color: #e8eeff; }
+      .tl-out-key { color: var(--amber); }
+      .tl-out-str { color: #7ec8e3; }
+      .tl-out-bool { color: #ff8c60; }
+      .tl-out-num { color: #b8f7a6; }
+      .tl-out-muted { color: var(--muted); }
+      .tl-out-neon { color: var(--neon); }
+      .tl-out-purple { color: #a990ff; }
+      .tl-out-green { color: #28c840; }
+      .tl-cursor-block {
+        display: inline-block;
+        width: 8px; height: 14px;
+        background: var(--neon);
+        vertical-align: text-bottom;
+        animation: blink 1s step-end infinite;
+        margin-left: 1px;
+      }
+      @keyframes blink { 0%,50% { opacity:1; } 51%,100% { opacity:0; } }
+
+      .terminal-mini {
+        display: grid; grid-template-columns: 1fr 1fr; gap: 10px;
+      }
+      .mini-card {
+        background: rgba(6,10,22,0.9);
+        border: 1px solid var(--border);
+        border-radius: 8px;
+        padding: 14px;
+      }
+      .mini-label {
+        font-family: 'JetBrains Mono', monospace;
+        font-size: 0.68rem;
+        color: var(--muted);
+        text-transform: uppercase; letter-spacing: 1px;
+        margin-bottom: 4px;
+      }
+      .mini-val {
+        font-family: 'Syne', sans-serif;
+        font-size: 1.1rem; font-weight: 700;
+        color: var(--neon);
+      }
+
+      /* ─── MARQUEE ─── */
+      .marquee-wrap {
+        overflow: hidden;
+        border-top: 1px solid var(--border);
+        border-bottom: 1px solid var(--border);
+        padding: 0;
+        position: relative;
+      }
+      .marquee-track {
+        display: flex; gap: 0;
+        white-space: nowrap;
+        animation: scroll 28s linear infinite;
+      }
+      .marquee-item {
+        display: inline-flex; align-items: center; gap: 0;
+        font-family: 'JetBrains Mono', monospace;
+        font-size: 0.78rem;
+        color: var(--muted);
+        text-transform: uppercase; letter-spacing: 2px;
+        padding: 14px 36px;
+      }
+      .marquee-item::after {
+        content: '//';
+        margin-left: 36px;
+        color: var(--neon-2);
+      }
+      @keyframes scroll {
+        0% { transform: translateX(0); }
+        100% { transform: translateX(-50%); }
+      }
+
+      /* ─── SECTIONS ─── */
+      section { padding: 100px 8vw; }
+      section:nth-child(even) { background: rgba(255,255,255,0.01); }
+
+      .section-label {
+        font-family: 'JetBrains Mono', monospace;
+        font-size: 0.72rem;
+        color: var(--neon);
+        text-transform: uppercase; letter-spacing: 3px;
+        margin-bottom: 12px;
+        display: flex; align-items: center; gap: 10px;
+      }
+      .section-label::before {
+        content: ''; display: block;
+        width: 24px; height: 1px;
+        background: var(--neon);
+      }
+      h2 {
+        font-family: 'Syne', sans-serif;
+        font-weight: 800;
+        font-size: clamp(2rem, 3.5vw, 3rem);
+        line-height: 1.05;
+        letter-spacing: -0.02em;
+        margin-bottom: 16px;
+      }
+      .section-sub {
+        color: var(--muted);
+        font-size: 1rem;
+        max-width: 560px;
+        line-height: 1.6;
+        margin-bottom: 50px;
+      }
+
+      /* ─── EXPERIENCE ─── */
+      .exp-list { display: flex; flex-direction: column; gap: 2px; }
+      .exp-item {
+        display: grid;
+        grid-template-columns: 200px 1fr;
+        gap: 0 40px;
+        padding: 32px 0;
+        border-bottom: 1px solid var(--border);
+        transition: background 0.2s;
+      }
+      .exp-item:first-child { border-top: 1px solid var(--border); }
+      .exp-left {}
+      .exp-period {
+        font-family: 'JetBrains Mono', monospace;
+        font-size: 0.78rem;
+        color: var(--muted);
+        margin-bottom: 6px;
+      }
+      .exp-company {
+        font-family: 'JetBrains Mono', monospace;
+        font-size: 0.82rem;
+        color: var(--neon);
+      }
+      .exp-right {}
+      .exp-role {
+        font-family: 'Syne', sans-serif;
+        font-weight: 700;
+        font-size: 1.2rem;
+        margin-bottom: 10px;
+        color: var(--text);
+      }
+      .exp-desc {
+        color: var(--muted);
+        font-size: 0.92rem;
+        line-height: 1.65;
+        max-width: 640px;
+        margin-bottom: 14px;
+      }
+      .exp-tags { display: flex; gap: 8px; flex-wrap: wrap; }
+      .tag {
+        font-family: 'JetBrains Mono', monospace;
+        font-size: 0.7rem;
+        padding: 4px 10px;
+        border-radius: 4px;
+        background: rgba(110,77,255,0.12);
+        border: 1px solid rgba(110,77,255,0.25);
+        color: #a990ff;
+      }
+
+      /* ─── STACK ─── */
+      .stack-grid {
+        display: grid;
+        grid-template-columns: repeat(auto-fill, minmax(130px, 1fr));
+        gap: 10px;
+      }
+      .stack-item {
+        padding: 16px;
+        border: 1px solid var(--border);
+        border-radius: 8px;
+        background: var(--card);
+        text-align: center;
+        transition: all 0.2s;
+      }
+      .stack-item:hover {
+        border-color: var(--border-neon);
+        box-shadow: 0 0 20px rgba(0,255,200,0.08);
+        transform: translateY(-2px);
+      }
+      .stack-icon { font-size: 1.4rem; margin-bottom: 6px; }
+      .stack-name {
+        font-family: 'JetBrains Mono', monospace;
+        font-size: 0.78rem;
+        color: var(--muted);
+      }
+
+      /* ─── PROJECTS ─── */
+      .projects-grid {
+        display: grid;
+        grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+        gap: 16px;
+      }
+      .project-card {
+        background: var(--card);
+        border: 1px solid var(--border);
+        border-radius: 12px;
+        padding: 28px;
+        transition: all 0.25s;
+        position: relative;
+        overflow: hidden;
+      }
+      .project-card::before {
+        content: '';
+        position: absolute; top: 0; left: 0; right: 0;
+        height: 2px;
+        background: linear-gradient(90deg, var(--neon-2), var(--neon));
+        opacity: 0;
+        transition: opacity 0.2s;
+      }
+      .project-card:hover::before { opacity: 1; }
+      .project-card:hover { border-color: rgba(255,255,255,0.1); transform: translateY(-3px); }
+      .project-num {
+        font-family: 'JetBrains Mono', monospace;
+        font-size: 0.72rem;
+        color: var(--muted-2);
+        margin-bottom: 16px;
+      }
+      .project-title {
+        font-family: 'Syne', sans-serif;
+        font-weight: 700;
+        font-size: 1.15rem;
+        margin-bottom: 10px;
+      }
+      .project-desc {
+        color: var(--muted);
+        font-size: 0.9rem;
+        line-height: 1.6;
+        margin-bottom: 18px;
+      }
+      .project-tags { display: flex; gap: 8px; flex-wrap: wrap; }
+      .p-tag {
+        font-family: 'JetBrains Mono', monospace;
+        font-size: 0.68rem;
+        padding: 3px 8px;
+        border-radius: 4px;
+        background: rgba(0,255,200,0.07);
+        border: 1px solid rgba(0,255,200,0.15);
+        color: var(--neon);
+      }
+      .project-links {
+        margin-top: 14px;
+        font-family: 'JetBrains Mono', monospace;
+        font-size: 0.72rem;
+      }
+      .project-links a {
+        color: var(--text);
+        border-bottom: 1px solid rgba(0,255,200,0.25);
+      }
+      .project-links a:hover {
+        color: var(--neon);
+      }
+
+      /* ─── RECOMMENDATIONS ─── */
+      .recs-grid {
+        display: flex;
+        gap: 16px;
+        overflow-x: auto;
+        overflow-y: hidden;
+        padding-bottom: 14px;
+        scroll-snap-type: x mandatory;
+        scrollbar-width: none;
+        cursor: grab;
+        user-select: none;
+        -webkit-overflow-scrolling: touch;
+        overscroll-behavior-x: contain;
+      }
+      .recs-grid.is-dragging { cursor: grabbing; }
+      .rec-card {
+        background: linear-gradient(180deg, rgba(10,14,28,0.95), rgba(6,10,22,0.95));
+        border: 1px solid var(--border);
+        border-radius: 12px;
+        padding: 24px;
+        position: relative;
+        overflow: hidden;
+        flex: 0 0 min(360px, 84vw);
+        scroll-snap-align: start;
+      }
+      .recs-grid::-webkit-scrollbar { display: none; height: 0; width: 0; }
+      .rec-card::before {
+        content: '';
+        position: absolute;
+        top: 0;
+        left: 0;
+        right: 0;
+        height: 2px;
+        background: linear-gradient(90deg, var(--magenta), var(--neon));
+        opacity: 0.8;
+      }
+      .rec-name {
+        font-family: 'Syne', sans-serif;
+        font-weight: 700;
+        font-size: 1.05rem;
+        margin-bottom: 4px;
+      }
+      .rec-meta {
+        font-family: 'JetBrains Mono', monospace;
+        font-size: 0.7rem;
+        color: var(--muted);
+        margin-bottom: 14px;
+      }
+      .rec-quote {
+        color: var(--text);
+        font-size: 0.92rem;
+        line-height: 1.7;
+      }
+      .rec-quote em {
+        color: var(--neon);
+        font-style: normal;
+      }
+      .recs-hint {
+        font-family: 'JetBrains Mono', monospace;
+        font-size: 0.72rem;
+        color: var(--muted);
+        margin-bottom: 16px;
+        letter-spacing: 0.6px;
+      }
+
+      /* ─── CONTACT ─── */
+      .contact-wrap {
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        gap: 60px;
+        align-items: center;
+      }
+      .contact-left h2 { margin-bottom: 20px; }
+      .contact-right {
+        background: var(--card);
+        border: 1px solid var(--border);
+        border-radius: 16px;
+        padding: 36px;
+      }
+      .contact-email {
+        font-family: 'JetBrains Mono', monospace;
+        font-size: 1.1rem;
+        color: var(--neon);
+        margin-bottom: 24px;
+        word-break: break-all;
+      }
+      .contact-links {
+        display: flex; gap: 12px; flex-wrap: wrap;
+      }
+      .contact-link {
+        padding: 10px 20px;
+        border: 1px solid var(--border);
+        border-radius: 8px;
+        font-family: 'JetBrains Mono', monospace;
+        font-size: 0.82rem;
+        color: var(--muted);
+        transition: all 0.2s;
+        display: flex; align-items: center; gap: 8px;
+      }
+      .contact-link:hover { border-color: var(--muted-2); color: var(--text); }
+
+      /* ─── FOOTER ─── */
+      .footer {
+        padding: 32px 8vw;
+        border-top: 1px solid var(--border);
+        display: flex; align-items: center; justify-content: space-between;
+        font-family: 'JetBrains Mono', monospace;
+        font-size: 0.75rem;
+        color: var(--muted-2);
+      }
+
+      /* ─── ANIMATIONS ─── */
+      .reveal {
+        opacity: 0;
+        transform: translateY(24px);
+        transition: opacity 0.6s ease, transform 0.6s ease;
+      }
+      .reveal.visible {
+        opacity: 1;
+        transform: none;
+      }
+
+      /* ─── RESPONSIVE ─── */
+      @media (max-width: 900px) {
+        .hero { grid-template-columns: 1fr; min-height: auto; }
+        .hero-left { padding: 90px 6vw 40px; }
+        .hero-right { padding: 0 6vw 60px; }
+        .contact-wrap { grid-template-columns: 1fr; gap: 30px; }
+        .nav { display: none; }
+        .exp-item { grid-template-columns: 1fr; gap: 8px; }
+      }
+      @media (max-width: 600px) {
+        section { padding: 70px 5vw; }
+        .hero-actions { flex-direction: column; }
+        .btn { text-align: center; justify-content: center; }
+        .terminal-mini { grid-template-columns: 1fr 1fr; }
+      }
+    </style>
+  </head>
+  <body>
+
+    <div class="bg-layer">
+      <div class="bg-grid"></div>
+      <div class="bg-noise"></div>
+      <div class="bg-radial"></div>
+      <div class="bg-radial-2"></div>
+      <div class="scanlines"></div>
+    </div>
+
+    <header class="header">
+      <div class="logo">RO<span>_</span></div>
+      <nav class="nav">
+        <a href="#experience">Exp</a>
+        <a href="#stack">Stack</a>
+        <a href="#projects">Projects</a>
+        <a href="#oss">OSS</a>
+        <a href="#recommendations">Reviews</a>
+        <a href="#contact">Contact</a>
+      </nav>
+      <div class="header-cta">
+        <a class="btn-cv" href="cv.html">↗ CV / PDF</a>
+      </div>
+    </header>
+
+    <main>
+      <!-- ─── HERO ─── -->
+      <section class="hero" id="top">
+        <div class="hero-left">
+          <div class="avatar-wrap">
+            <div class="avatar-ring">
+              <img class="avatar-img" src="https://github.com/rodrigooler.png" alt="Rodrigo Oler" />
+            </div>
+            <div class="avatar-info">
+              <div class="avatar-handle">@rodrigooler</div>
+              <div class="avatar-since">github.com/rodrigooler</div>
+            </div>
+          </div>
+          <div class="status-dot">Available for senior/lead roles</div>
+          <h1 class="hero-name">
+            Rodrigo<br>
+            <span class="line-2">Oler</span>
+          </h1>
+          <p class="hero-role">
+            Senior Engineer · Ex-CTO · <span>3x Co-Founder · 2x CTO</span> · Open Source
+          </p>
+          <p class="hero-desc">
+            Full-stack engineer with 14+ years turning ambitious ideas into resilient products. I lead delivery across fintech, luxury real estate, blockchain, and open source with a bias for speed, structure, and scale.
+          </p>
+          <div class="hero-actions">
+            <a class="btn btn-primary" href="#contact">Let's talk →</a>
+            <a class="btn btn-ghost" href="cv.html">View CV</a>
+            <a class="btn btn-ghost" href="https://github.com/rodrigooler" target="_blank">GitHub ↗</a>
+          </div>
+          <div class="hero-meta">
+            <div class="meta-item">
+              <span class="meta-num">14+</span>
+              <span class="meta-label">Years exp.</span>
+            </div>
+            <span class="meta-sep">|</span>
+            <div class="meta-item">
+              <span class="meta-num">2x</span>
+              <span class="meta-label">CTO</span>
+            </div>
+            <span class="meta-sep">|</span>
+            <div class="meta-item">
+              <span class="meta-num">$200M+</span>
+              <span class="meta-label">Vol. shipped</span>
+            </div>
+          </div>
+        </div>
+
+        <div class="hero-right">
+          <div class="terminal-wrap">
+            <div class="terminal">
+              <div class="t-header">
+                <div class="t-dots">
+                  <div class="t-dot r"></div>
+                  <div class="t-dot y"></div>
+                  <div class="t-dot g"></div>
+                </div>
+                <span class="t-title">~ /usr/bin/rodrigo</span>
+              </div>
+              <div class="t-body" id="terminal"></div>
+            </div>
+            <div class="terminal-mini">
+              <div class="mini-card">
+                <div class="mini-label">Location</div>
+                <div class="mini-val">São Paulo</div>
+              </div>
+              <div class="mini-card">
+                <div class="mini-label">Mode</div>
+                <div class="mini-val">Remote</div>
+              </div>
+              <div class="mini-card">
+                <div class="mini-label">Focus</div>
+                <div class="mini-val">TS / AI</div>
+              </div>
+              <div class="mini-card">
+                <div class="mini-label">Status</div>
+                <div class="mini-val" style="color: var(--neon)">Open</div>
+              </div>
+            </div>
+            <div class="hero-stack-line" aria-label="Focus stack">
+              <span class="hero-stack-chip">TS</span>
+              <span class="hero-stack-chip">PY</span>
+              <span class="hero-stack-chip">RS</span>
+              <span class="hero-stack-chip">GO</span>
+              <span class="hero-stack-chip">AI</span>
+              <span class="hero-stack-chip">LLM</span>
+              <span class="hero-stack-chip">Open Models</span>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- ─── MARQUEE ─── -->
+      <div class="marquee-wrap">
+        <div class="marquee-track" id="marquee"></div>
+      </div>
+
+      <!-- ─── EXPERIENCE ─── -->
+      <section id="experience">
+        <div class="section-label">Experience</div>
+        <h2>Where I've shipped.</h2>
+        <p class="section-sub">Selected roles across product, consulting, and embedded engineering. Full history is on LinkedIn and the CV.</p>
+
+        <div class="exp-list">
+          <div class="exp-item reveal">
+            <div class="exp-left">
+              <div class="exp-period">Apr 2025 – Mar 2026</div>
+              <div class="exp-company">Torus Network</div>
+            </div>
+            <div class="exp-right">
+              <div class="exp-role">Senior Software Engineer</div>
+              <p class="exp-desc">
+                Built scalable Web3 delivery in a Turborepo / Next.js monorepo, optimized bridge flows by 60–70%, and cut CI/CD time by ~85%.
+              </p>
+              <div class="exp-tags">
+                <span class="tag">Next.js</span><span class="tag">TypeScript</span>
+                <span class="tag">Web3</span><span class="tag">Turborepo</span>
+                <span class="tag">Vitest</span><span class="tag">SSR</span>
+              </div>
+            </div>
+          </div>
+
+          <div class="exp-item reveal">
+            <div class="exp-left">
+              <div class="exp-period">Sep 2024 – Apr 2025</div>
+              <div class="exp-company">Onda Finance</div>
+            </div>
+            <div class="exp-right">
+              <div class="exp-role">Co-Founder & CTO</div>
+              <p class="exp-desc">
+                Took a high-frequency OTC platform from MVP to $200M+ in volume, with Fireblocks, multi-region AWS, Terraform, and strong delivery cadence.
+              </p>
+              <div class="exp-tags">
+                <span class="tag">Next.js</span><span class="tag">Node.js</span>
+                <span class="tag">AWS</span><span class="tag">Fireblocks</span>
+                <span class="tag">Terraform</span><span class="tag">PIX/USDT</span>
+              </div>
+            </div>
+          </div>
+
+          <div class="exp-item reveal">
+            <div class="exp-left">
+              <div class="exp-period">Oct 2022 – Present</div>
+              <div class="exp-company">Date a Home Brasil</div>
+            </div>
+            <div class="exp-right">
+              <div class="exp-role">Advisor & Investor</div>
+              <p class="exp-desc">
+                Strategic equity holder supporting the company on fundraising, investor conversations, and product direction. Previously helped build the platform with a microservices backend, Angular SSR frontend, and CircleCI delivery pipelines.
+              </p>
+              <div class="exp-tags">
+                <span class="tag">Angular</span><span class="tag">NestJS</span>
+                <span class="tag">PostgreSQL</span><span class="tag">AWS</span>
+                <span class="tag">CircleCI</span><span class="tag">Investor</span>
+              </div>
+            </div>
+          </div>
+
+          <div class="exp-item reveal">
+            <div class="exp-left">
+              <div class="exp-period">Oct 2022 – Sep 2025</div>
+              <div class="exp-company">Codechain</div>
+            </div>
+            <div class="exp-right">
+              <div class="exp-role">Senior Software Engineer</div>
+              <p class="exp-desc">
+                Embedded across Autentcis, iCurti, ArrecadaNet, and SoGestao, delivering product builds, automation, and AWS consulting in short and medium-term cycles.
+              </p>
+              <div class="exp-tags">
+                <span class="tag">Node.js</span><span class="tag">AWS</span>
+                <span class="tag">TypeScript</span><span class="tag">REST</span>
+                <span class="tag">Cloud</span>
+              </div>
+            </div>
+          </div>
+
+          <div class="exp-item reveal">
+            <div class="exp-left">
+              <div class="exp-period">Aug 2022 – Jul 2023</div>
+              <div class="exp-company">Higher Order Company / UwU Games</div>
+            </div>
+            <div class="exp-right">
+              <div class="exp-role">Head of Front-End</div>
+              <p class="exp-desc">
+                Led frontend delivery for a Kindelia-based blockchain game powered by HVM, while also shipping internal tools and reusable UI systems.
+              </p>
+              <div class="exp-tags">
+                <span class="tag">Kindelia</span><span class="tag">HVM</span>
+                <span class="tag">Frontend</span><span class="tag">UI Systems</span>
+              </div>
+            </div>
+          </div>
+
+          <div class="exp-item reveal">
+            <div class="exp-left">
+              <div class="exp-period">Jan 2018 – Apr 2025</div>
+              <div class="exp-company">Brokerse</div>
+            </div>
+            <div class="exp-right">
+              <div class="exp-role">Co-Founder & CTO</div>
+              <p class="exp-desc">
+                Built low-latency trading systems with CCXT and Node.js for OTC and copy-trade workflows, plus remote-first delivery and blockchain consulting.
+              </p>
+              <div class="exp-tags">
+                <span class="tag">Node.js</span><span class="tag">CCXT</span>
+                <span class="tag">WebSockets</span><span class="tag">Solidity</span>
+                <span class="tag">OKRs</span>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- ─── STACK ─── -->
+      <section id="stack">
+        <div class="section-label">Stack</div>
+        <h2>Tools I think in.</h2>
+        <p class="section-sub">Core technologies I use daily to design, build, and ship.</p>
+
+        <div class="stack-grid">
+          <div class="stack-item reveal"><div class="stack-icon">𝙏𝙎</div><div class="stack-name">TypeScript</div></div>
+          <div class="stack-item reveal"><div class="stack-icon">⬡</div><div class="stack-name">Next.js</div></div>
+          <div class="stack-item reveal"><div class="stack-icon">⚛</div><div class="stack-name">React</div></div>
+          <div class="stack-item reveal"><div class="stack-icon">▲</div><div class="stack-name">Angular</div></div>
+          <div class="stack-item reveal"><div class="stack-icon">⬢</div><div class="stack-name">Node.js</div></div>
+          <div class="stack-item reveal"><div class="stack-icon">☁</div><div class="stack-name">AWS</div></div>
+          <div class="stack-item reveal"><div class="stack-icon">🐘</div><div class="stack-name">PostgreSQL</div></div>
+          <div class="stack-item reveal"><div class="stack-icon">🐳</div><div class="stack-name">Docker</div></div>
+          <div class="stack-item reveal"><div class="stack-icon">◌</div><div class="stack-name">CircleCI</div></div>
+          <div class="stack-item reveal"><div class="stack-icon">⛓</div><div class="stack-name">Web3</div></div>
+          <div class="stack-item reveal"><div class="stack-icon">🤖</div><div class="stack-name">AI / LLMs</div></div>
+          <div class="stack-item reveal"><div class="stack-icon">♾</div><div class="stack-name">CI/CD</div></div>
+          <div class="stack-item reveal"><div class="stack-icon">📊</div><div class="stack-name">Observability</div></div>
+        </div>
+      </section>
+
+      <!-- ─── PROJECTS ─── -->
+      <section id="projects">
+        <div class="section-label">Projects</div>
+        <h2>Things I've built.</h2>
+        <p class="section-sub">A curated selection of products and platforms.</p>
+
+        <div class="projects-grid">
+          <div class="project-card reveal">
+            <div class="project-num">01</div>
+            <div class="project-title">Onda Finance — OTC Platform</div>
+            <p class="project-desc">High-frequency OTC trading platform handling PIX/USD/USDT settlements. Scaled from 0 to $200M+ in volume with zero downtime, event-driven architecture.</p>
+            <div class="project-tags">
+              <span class="p-tag">Next.js</span><span class="p-tag">Node.js</span><span class="p-tag">AWS</span><span class="p-tag">Fireblocks</span>
+            </div>
+          </div>
+          <div class="project-card reveal">
+            <div class="project-num">02</div>
+            <div class="project-title">Torus Network — Token Bridge</div>
+            <p class="project-desc">Layer-1 blockchain wallet, bridge and allocator systems. Refactored bridge workflow achieving 60–70% reduction in transaction time.</p>
+            <div class="project-tags">
+              <span class="p-tag">Web3</span><span class="p-tag">Next.js</span><span class="p-tag">Turborepo</span><span class="p-tag">SSR</span>
+            </div>
+          </div>
+          <div class="project-card reveal">
+            <div class="project-num">03</div>
+            <div class="project-title">Multi-Exchange Trading Engine</div>
+            <p class="project-desc">Low-latency trading engine with CCXT for real-time OTC and copy-trade across major liquidity providers including Binance.</p>
+            <div class="project-tags">
+              <span class="p-tag">Node.js</span><span class="p-tag">CCXT</span><span class="p-tag">WebSockets</span>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- ─── OPEN SOURCE ─── -->
+      <section id="oss">
+        <div class="section-label">Open Source</div>
+        <h2>Projects I keep public.</h2>
+        <p class="section-sub">Open-source work that shows product thinking, engineering rigor, and a bias for shipping useful tools. Raxion is a solo-founder effort; Try-TypeScript is partially open source.</p>
+
+        <div class="projects-grid">
+          <div class="project-card reveal">
+            <div class="project-num">01</div>
+            <div class="project-title">Raxion</div>
+            <p class="project-desc">Solo-founder project. Sovereign SVM rollup on Solana focused on verifiable AI inference quality through PoIQ, statistical convergence, stochastic verification, and slashing. Active since Jan 2026.</p>
+            <div class="project-tags">
+              <span class="p-tag">Solana</span><span class="p-tag">AI</span><span class="p-tag">PoIQ</span><span class="p-tag">Solo Founder</span>
+            </div>
+            <div class="project-links"><a href="https://github.com/rodrigooler/raxion" target="_blank" rel="noreferrer">GitHub repo ↗</a></div>
+          </div>
+          <div class="project-card reveal">
+            <div class="project-num">02</div>
+            <div class="project-title">Try-TypeScript</div>
+            <p class="project-desc">Partial open source TypeScript learning platform with 150+ interactive lessons, real-time execution, bilingual support, and a current push toward younger and children-focused education.</p>
+            <div class="project-tags">
+              <span class="p-tag">TypeScript</span><span class="p-tag">Education</span><span class="p-tag">Interactive</span><span class="p-tag">Partial OSS</span>
+            </div>
+            <div class="project-links"><a href="https://github.com/rodrigooler/try-typescript" target="_blank" rel="noreferrer">GitHub repo ↗</a></div>
+          </div>
+          <div class="project-card reveal">
+            <div class="project-num">03</div>
+            <div class="project-title">DataStudio</div>
+            <p class="project-desc">Open-source multi-driver database tool for browsing and working with different data sources in one place.</p>
+            <div class="project-tags">
+              <span class="p-tag">Database</span><span class="p-tag">Open Source</span><span class="p-tag">Multi-driver</span>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- ─── RECOMMENDATIONS ─── -->
+      <section id="recommendations">
+        <div class="section-label">Recommendations</div>
+        <h2>What people say after working with me.</h2>
+        <p class="section-sub">All the recommendations you shared, ordered with the strongest leadership signals first. Scroll sideways to see the rest.</p>
+        <div class="recs-hint">Drag horizontally or swipe on touch devices.</div>
+
+        <div class="recs-grid">
+          <div class="rec-card reveal">
+            <div class="rec-name">Ronaldo Lima</div>
+            <div class="rec-meta">Lead Developer at Amplify</div>
+            <p class="rec-quote">I worked with Rodrigo at the <strong>beginning of his career</strong>, and it was already clear he would grow into a strong technical leader. What stood out early was how quickly he connected <strong>architecture decisions</strong> to <strong>real business needs</strong> and how naturally he took <strong>ownership</strong> of complex problems instead of just making it work. He also brought a practical mindset around <strong>crypto</strong>, <strong>blockchain</strong>, and <strong>AI</strong>, always sharing what he learned in a useful way.</p>
+          </div>
+          <div class="rec-card reveal">
+            <div class="rec-name">Renato Benkendorf</div>
+            <div class="rec-meta">Staff Engineer · Gen-AI & LLMs</div>
+            <p class="rec-quote">Oler has the right profile for <strong>complex challenges</strong> and <strong>leadership projects</strong>. He combines a strong engineering mindset with the ability to make <strong>hard decisions under pressure</strong>, and he is consistently willing to help others grow through <strong>mentoring</strong> and hands-on support.</p>
+          </div>
+          <div class="rec-card reveal">
+            <div class="rec-name">Guilherme Esteves</div>
+            <div class="rec-meta">CTO & Backend Engineer</div>
+            <p class="rec-quote">I'm glad I had the chance to work with Oler. He is an <strong>exceptional developer</strong> and genuinely <strong>passionate about technology</strong>. Working with him made me a better professional, because he pushes the team to raise the bar without losing clarity.</p>
+          </div>
+          <div class="rec-card reveal">
+            <div class="rec-name">Felippe Rodrigo Puhle</div>
+            <div class="rec-meta">Software Engineer</div>
+            <p class="rec-quote">Oler is an excellent developer: <strong>proactive</strong>, <strong>dedicated</strong>, and always suggesting strong ideas to solve problems quickly. He is the kind of person who helps the team move faster without creating noise.</p>
+          </div>
+          <div class="rec-card reveal">
+            <div class="rec-name">Luiz Fernando Sousa Camargo</div>
+            <div class="rec-meta">Senior Software Engineer - Coinbase</div>
+            <p class="rec-quote">Rodrigo is a <strong>highly competent engineer</strong> with strong skills across <strong>development</strong> and <strong>project management</strong>. He has the kind of technical breadth that makes execution easier across different kinds of teams.</p>
+          </div>
+          <div class="rec-card reveal">
+            <div class="rec-name">Jonathan Cardoso Machado</div>
+            <div class="rec-meta">Founding Staff Engineer</div>
+            <p class="rec-quote">Oler is an excellent professional to work with, with strong <strong>mobile</strong> and <strong>web development</strong> skills. He is also <strong>funny</strong>, positive under pressure, and easy to work with on demanding projects.</p>
+          </div>
+          <div class="rec-card reveal">
+            <div class="rec-name">Carlos Alexandre Fuechter</div>
+            <div class="rec-meta">Software Engineering at Tetris.co</div>
+            <p class="rec-quote">Oler is a great developer: <strong>smart</strong>, fast at solving <strong>complex problems</strong>, and always eager to help the team when needed. His <strong>curiosity</strong> around new technology stands out.</p>
+          </div>
+          <div class="rec-card reveal">
+            <div class="rec-name">Miguel Silva</div>
+            <div class="rec-meta">ERP / Business Systems Consultant</div>
+            <p class="rec-quote">Rodrigo is a great partner: <strong>smart</strong>, <strong>hardworking</strong>, and always focused on solving problems in the best possible way. He brings the kind of mindset that makes collaboration easy.</p>
+          </div>
+          <div class="rec-card reveal">
+            <div class="rec-name">Michel Spirlandeli</div>
+            <div class="rec-meta">Backend Engineer</div>
+            <p class="rec-quote">Rodrigo is a <strong>dedicated</strong> and <strong>responsible</strong> professional who was always willing to go beyond what had been taught, showing real initiative and growth mindset.</p>
+          </div>
+          <div class="rec-card reveal">
+            <div class="rec-name">José Henrique Godoi Alves</div>
+            <div class="rec-meta">Director at EnterPlug Sistemas</div>
+            <p class="rec-quote">He is <strong>creative</strong>, <strong>attentive</strong>, and committed to delivering what was asked with care. He also has a good instinct for turning open problems into practical outcomes.</p>
+          </div>
+          <div class="rec-card reveal">
+            <div class="rec-name">André Luis</div>
+            <div class="rec-meta">Software Developer</div>
+            <p class="rec-quote">Rodrigo is an excellent professional: strong across multiple languages, always <strong>helpful</strong>, and a <strong>reliable team partner</strong> when the team needs support.</p>
+          </div>
+          <div class="rec-card reveal">
+            <div class="rec-name">Danielle Dornellas Diniz</div>
+            <div class="rec-meta">Systems Analyst</div>
+            <p class="rec-quote">He was a <strong>dedicated</strong> and <strong>responsible</strong> student who was eager to keep learning and growing beyond what was taught in class.</p>
+          </div>
+          <div class="rec-card reveal">
+            <div class="rec-name">Brendon Vicente</div>
+            <div class="rec-meta">Data Engineer</div>
+            <p class="rec-quote">Rodrigo is <strong>well-focused</strong>, has a very <strong>strong logical mindset</strong>, and was excellent to work with on mobile development and problem solving.</p>
+          </div>
+          <div class="rec-card reveal">
+            <div class="rec-name">Alexander Ruiz</div>
+            <div class="rec-meta">Full Stack Developer</div>
+            <p class="rec-quote">An <strong>excellent professional</strong> and a pleasure to work with on projects. He is always willing to help the team with <strong>dedication</strong> and good ideas.</p>
+          </div>
+          <div class="rec-card reveal">
+            <div class="rec-name">Rafael Ribeiro</div>
+            <div class="rec-meta">Software Engineer at CloudWalk</div>
+            <p class="rec-quote">Rodrigo is highly capable, solves <strong>complex problems</strong> quickly, and helps the team whenever needed. He learns new technology fast and keeps a strong <strong>curiosity</strong> for improving things.</p>
+          </div>
+          <div class="rec-card reveal">
+            <div class="rec-name">Agnaldo Devenis</div>
+            <div class="rec-meta">Business Analyst in IT</div>
+            <p class="rec-quote">A very <strong>competent professional</strong> with strong knowledge across <strong>development</strong> and <strong>project management</strong>.</p>
+          </div>
+          <div class="rec-card reveal">
+            <div class="rec-name">Rodrigo Silva</div>
+            <div class="rec-meta">Analytics Engineer at Luizalabs</div>
+            <p class="rec-quote">Oler is <strong>collaborative</strong>, <strong>focused</strong>, and <strong>innovative</strong>. I had the privilege of graduating with him and seeing his growth first-hand.</p>
+          </div>
+          <div class="rec-card reveal">
+            <div class="rec-name">Eduard Teixeira</div>
+            <div class="rec-meta">Software Developer</div>
+            <p class="rec-quote">Very <strong>detail-oriented</strong>, <strong>fast</strong>, and highly <strong>responsive</strong> in execution.</p>
+          </div>
+          <div class="rec-card reveal">
+            <div class="rec-name">Vinicius Sebastião dos Santos</div>
+            <div class="rec-meta">Open to new opportunities</div>
+            <p class="rec-quote">Rodrigo is a great friend and a <strong>problem solver</strong> who works through issues the right way, with patience and good judgment.</p>
+          </div>
+          <div class="rec-card reveal">
+            <div class="rec-name">Lucas Vilela</div>
+            <div class="rec-meta">Student</div>
+            <p class="rec-quote">An <strong>excellent student</strong> and professional who was always <strong>helpful</strong> when questions came up and willing to share what he knew.</p>
+          </div>
+        </div>
+      </section>
+
+      <!-- ─── CONTACT ─── -->
+      <section id="contact">
+        <div class="contact-wrap">
+          <div class="contact-left">
+            <div class="section-label">Contact</div>
+            <h2>Let's build something worth shipping.</h2>
+            <p class="section-sub">Open to senior/lead engineering roles, founding teams, selective consulting, and open-source collaborations. Remote preferred.</p>
+          </div>
+          <div class="contact-right reveal">
+            <div class="section-label" style="margin-bottom: 20px;">Get in touch</div>
+            <div class="contact-email">roodrigoprogrammer@gmail.com</div>
+            <div class="contact-links">
+              <a class="contact-link" href="mailto:roodrigoprogrammer@gmail.com">✉ Email</a>
+              <a class="contact-link" href="https://github.com/rodrigooler" target="_blank" rel="noreferrer">⌥ GitHub</a>
+              <a class="contact-link" href="https://www.linkedin.com/in/rodrigooler/" target="_blank" rel="noreferrer">◈ LinkedIn</a>
+              <a class="contact-link" href="cv.html">⬡ View CV</a>
+            </div>
+          </div>
+        </div>
+      </section>
+    </main>
+
+    <footer class="footer">
+      <span>© 2026 Rodrigo Oler</span>
+      <span>Crafted in the terminal · São Paulo, Brazil</span>
+    </footer>
+
+    <script>
+    // ═══════════════════════════════════════════════
+    //  TERMINAL ENGINE — realistic input / output
+    // ═══════════════════════════════════════════════
+    const termEl = document.getElementById('terminal');
+
+    // Helper: create a styled span
+    const span = (cls, text) => {
+      const s = document.createElement('span');
+      s.className = cls;
+      s.textContent = text;
+      return s;
+    };
+
+    // Prompt node: rodrigo@oler:~$
+    function makePromptNode() {
+      const p = document.createElement('span');
+      p.appendChild(span('tl-prompt-user', 'rodrigo'));
+      p.appendChild(span('tl-prompt-sep',  '@'));
+      p.appendChild(span('tl-prompt-user', 'oler'));
+      p.appendChild(span('tl-prompt-sep',  ':'));
+      p.appendChild(span('tl-prompt-path', '~'));
+      p.appendChild(span('tl-prompt-sep',  '$ '));
+      return p;
+    }
+
+    // Session script: each entry = { cmd, output[] }
+    // output items: { spans: [{cls, text}], delay? }
+    const session = [
+      {
+        cmd: 'whoami',
+        outputDelay: 60,
+        output: [
+          [{ cls:'tl-out-neon', text:'rodrigo_oler' }, { cls:'tl-out-muted', text:' // ' }, { cls:'tl-out-purple', text:'senior_engineer' }, { cls:'tl-out-muted', text:' // ' }, { cls:'tl-out-str', text:'2x_cto' }],
+        ]
+      },
+      {
+        cmd: 'cat profile.json',
+        outputDelay: 80,
+        output: [
+          [{ cls:'tl-out-muted', text:'{' }],
+          [{ cls:'tl-out-muted', text:'  ' }, { cls:'tl-out-key', text:'"name"' }, { cls:'tl-out-muted', text:':    ' }, { cls:'tl-out-str', text:'"Rodrigo Oler"' }],
+          [{ cls:'tl-out-muted', text:'  ' }, { cls:'tl-out-key', text:'"exp"' }, { cls:'tl-out-muted', text:':     ' }, { cls:'tl-out-str', text:'"14+ years"' }],
+          [{ cls:'tl-out-muted', text:'  ' }, { cls:'tl-out-key', text:'"focus"' }, { cls:'tl-out-muted', text:':   ' }, { cls:'tl-out-str', text:'"founding + product engineering"' }],
+          [{ cls:'tl-out-muted', text:'  ' }, { cls:'tl-out-key', text:'"location"' }, { cls:'tl-out-muted', text:': ' }, { cls:'tl-out-str', text:'"São Paulo, BR"' }],
+          [{ cls:'tl-out-muted', text:'  ' }, { cls:'tl-out-key', text:'"remote"' }, { cls:'tl-out-muted', text:':   ' }, { cls:'tl-out-bool', text:'true' }],
+          [{ cls:'tl-out-muted', text:'}' }],
+        ]
+      },
+      {
+        cmd: 'git log --oneline -3',
+        outputDelay: 55,
+        output: [
+          [{ cls:'tl-out-amber', text:'a3f2c1b ' }, { cls:'tl-out-muted', text:'scaled OTC platform → ' }, { cls:'tl-out-neon', text:'$200M+' }, { cls:'tl-out-muted', text:' vol' }],
+          [{ cls:'tl-out-amber', text:'d9e4a2f ' }, { cls:'tl-out-muted', text:'cut CI/CD build time by ' }, { cls:'tl-out-neon', text:'85%' }],
+          [{ cls:'tl-out-amber', text:'7c1b3d0 ' }, { cls:'tl-out-muted', text:'bridge tx latency ' }, { cls:'tl-out-neon', text:'-70%' }, { cls:'tl-out-muted', text:' @TorusNetwork' }],
+        ]
+      },
+      {
+        cmd: 'npm run status',
+        outputDelay: 90,
+        output: [
+          [{ cls:'tl-out-muted', text:'> checking availability...' }],
+          [{ cls:'tl-out-green', text:'✓ ' }, { cls:'tl-out-neon', text:'open_to_opportunities' }, { cls:'tl-out-muted', text:' = true' }],
+          [{ cls:'tl-out-green', text:'✓ ' }, { cls:'tl-out-muted', text:'preferred: ' }, { cls:'tl-out-str', text:'"senior / lead / remote"' }],
+        ]
+      },
+    ];
+
+    // ─── State ───
+    let currentStep = 0;
+    let cursorEl = null;
+
+    function appendLine(children) {
+      const row = document.createElement('div');
+      children.forEach(c => row.appendChild(c));
+      termEl.appendChild(row);
+    }
+
+    function appendBlank() {
+      termEl.appendChild(document.createElement('div'));
+    }
+
+    // Attach cursor to a span (placed after it)
+    function attachCursor(afterEl) {
+      if (cursorEl) cursorEl.remove();
+      cursorEl = document.createElement('span');
+      cursorEl.className = 'tl-cursor-block';
+      afterEl.parentNode.insertBefore(cursorEl, afterEl.nextSibling);
+    }
+
+    function removeCursor() {
+      if (cursorEl) { cursorEl.remove(); cursorEl = null; }
+    }
+
+    // Type a command character by character into cmdSpan
+    function typeCommand(cmdSpan, text, speed, done) {
+      let i = 0;
+      function tick() {
+        if (i < text.length) {
+          cmdSpan.textContent += text[i++];
+          setTimeout(tick, speed + Math.random() * 30 - 10);
+        } else {
+          done();
+        }
+      }
+      tick();
+    }
+
+    // Print output lines one by one
+    function printOutput(lines, lineDelay, done) {
+      let i = 0;
+      function next() {
+        if (i >= lines.length) { done(); return; }
+        const row = document.createElement('div');
+        lines[i].forEach(tok => {
+          const s = document.createElement('span');
+          s.className = tok.cls;
+          // amber fix - use style fallback
+          if (tok.cls === 'tl-out-amber') s.style.color = '#ffb800';
+          s.textContent = tok.text;
+          row.appendChild(s);
+        });
+        termEl.appendChild(row);
+        termEl.scrollTop = termEl.scrollHeight;
+        i++;
+        setTimeout(next, lineDelay);
+      }
+      next();
+    }
+
+    // Run one session step
+    function runStep(stepIdx) {
+      if (stepIdx >= session.length) {
+        // Final idle prompt with blinking cursor
+        appendBlank();
+        const idleRow = document.createElement('div');
+        idleRow.appendChild(makePromptNode());
+        const idleCursor = document.createElement('span');
+        idleCursor.className = 'tl-cursor-block';
+        idleRow.appendChild(idleCursor);
+        termEl.appendChild(idleRow);
+        termEl.scrollTop = termEl.scrollHeight;
+        return;
+      }
+
+      const step = session[stepIdx];
+
+      // 1. Render prompt row with empty cmd span
+      const promptRow = document.createElement('div');
+      promptRow.appendChild(makePromptNode());
+      const cmdSpan = document.createElement('span');
+      cmdSpan.className = 'tl-cmd';
+      promptRow.appendChild(cmdSpan);
+      termEl.appendChild(promptRow);
+      attachCursor(cmdSpan);
+      termEl.scrollTop = termEl.scrollHeight;
+
+      // 2. Type the command
+      setTimeout(() => {
+        typeCommand(cmdSpan, step.cmd, 55, () => {
+          // 3. Pause (simulating "thinking before Enter")
+          setTimeout(() => {
+            removeCursor();
+            termEl.scrollTop = termEl.scrollHeight;
+
+            // 4. Print output
+            setTimeout(() => {
+              printOutput(step.output, step.outputDelay, () => {
+                appendBlank();
+                termEl.scrollTop = termEl.scrollHeight;
+                // 5. Next step
+                setTimeout(() => runStep(stepIdx + 1), 320);
+              });
+            }, 80);
+          }, 380);
+        });
+      }, stepIdx === 0 ? 800 : 200);
+    }
+
+    // Kick off
+    runStep(0);
+
+    // ─── MARQUEE ───
+    const items = ['TypeScript','Next.js','Angular','CircleCI','AI/LLMs','Web3','Node.js','AWS','Solana','OSS','Blockchain','Remote-First','DDD','TDD','CI/CD','Observability','Fireblocks','Terraform'];
+    const track = document.getElementById('marquee');
+    const full = [...items,...items].map(i => `<span class="marquee-item">${i}</span>`).join('');
+    track.innerHTML = full + full;
+
+    // ─── REVEAL ON SCROLL ───
+    const revealObserver = new IntersectionObserver((entries) => {
+      entries.forEach((e, i) => {
+        if (e.isIntersecting) {
+          setTimeout(() => e.target.classList.add('visible'), i * 70);
+          revealObserver.unobserve(e.target);
+        }
+      });
+    }, { threshold: 0.07 });
+    document.querySelectorAll('.reveal').forEach(el => revealObserver.observe(el));
+
+    // ─── RECOMMENDATIONS DRAG SCROLL ───
+    const recsGrid = document.querySelector('.recs-grid');
+    if (recsGrid) {
+      let isDown = false;
+      let startX = 0;
+      let startScrollLeft = 0;
+
+      const stopDrag = () => {
+        isDown = false;
+        recsGrid.classList.remove('is-dragging');
+      };
+
+      recsGrid.addEventListener('pointerdown', (e) => {
+        if (e.button !== 0) return;
+        isDown = true;
+        startX = e.clientX;
+        startScrollLeft = recsGrid.scrollLeft;
+        recsGrid.classList.add('is-dragging');
+        recsGrid.setPointerCapture(e.pointerId);
+      });
+
+      recsGrid.addEventListener('pointermove', (e) => {
+        if (!isDown) return;
+        const delta = e.clientX - startX;
+        recsGrid.scrollLeft = startScrollLeft - delta;
+      });
+
+      recsGrid.addEventListener('pointerup', stopDrag);
+      recsGrid.addEventListener('pointercancel', stopDrag);
+      recsGrid.addEventListener('lostpointercapture', stopDrag);
+    }
+    </script>
+  </body>
+</html>

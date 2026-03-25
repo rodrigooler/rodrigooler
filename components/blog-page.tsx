@@ -1,9 +1,9 @@
 import Link from 'next/link';
 
+import { ArticleTranslator } from '@/components/article-translator';
 import { formatPostDate, slugifyTag } from '@/lib/blog';
 import type { BlogPost, BlogPostMeta } from '@/lib/blog';
 import { site } from '@/lib/site';
-import { TranslateButton } from '@/components/translate-button';
 
 function pageBackground() {
   return (
@@ -460,49 +460,9 @@ export function BlogPostPage({
       {pageBackground()}
       {header()}
 
-      <section className="grid min-h-[60vh] place-items-center px-[5vw] pt-24 lg:px-[8vw]">
-        <div className="max-w-4xl">
-          {sectionLabel('Article')}
-          <h1 className="font-display text-[clamp(3rem,5.5vw,5rem)] font-extrabold leading-[0.95] tracking-[-0.03em]">
-            {post.title}
-          </h1>
-          <p className="mt-6 max-w-3xl text-[1rem] leading-[1.7] text-[color:var(--muted)]">{post.description}</p>
-          <div className="mt-6 flex flex-wrap items-center gap-3 font-mono text-[0.78rem] text-[color:var(--muted)]">
-            <span>{formatPostDate(post.date)}</span>
-            <span className="text-[color:var(--muted-2)]">|</span>
-            <span>{post.readingTime}</span>
-            <span className="text-[color:var(--muted-2)]">|</span>
-            <span>Markdown source</span>
-          </div>
-          <div className="mt-6 flex flex-wrap gap-2">
-            {post.tags.map((tag) => (
-              <Link key={tag} href={`/blog/tags/${slugifyTag(tag)}`} className={tagClass('pill')}>
-                {tag}
-              </Link>
-            ))}
-          </div>
-          <div className="mt-6">
-            <TranslateButton />
-          </div>
-        </div>
-      </section>
-
-      <section className="px-[5vw] pb-[100px] lg:px-[8vw]">
+      <section className="px-[5vw] pt-24 pb-[100px] lg:px-[8vw]">
         <div className="grid gap-10 lg:grid-cols-[1fr_0.9fr]">
-          <article className="rounded-[12px] border border-[color:var(--border)] bg-[color:var(--card)] p-7 sm:p-8">
-            <div
-              className="prose prose-invert max-w-none prose-headings:font-display prose-p:leading-8 prose-li:leading-8 prose-a:text-[color:var(--neon)]"
-              dangerouslySetInnerHTML={{ __html: post.contentHtml }}
-            />
-            {post.canonical ? (
-              <p className="mt-8 font-mono text-[0.85rem] text-[color:var(--muted)]">
-                Canonical source:{' '}
-                <a className="border-b border-[rgba(0,255,200,0.25)] text-[color:var(--neon)]" href={post.canonical}>
-                  {post.canonical}
-                </a>
-              </p>
-            ) : null}
-          </article>
+          <ArticleTranslator post={post} />
 
           <aside className="space-y-6">
             <div className="rounded-[12px] border border-[color:var(--border)] bg-[color:var(--card)] p-7">
@@ -526,13 +486,6 @@ export function BlogPostPage({
                   CV
                 </Link>
               </div>
-            </div>
-            <div className="rounded-[12px] border border-[color:var(--border)] bg-[color:var(--card)] p-7">
-              {sectionLabel('Translate')}
-              <p className="mb-4 text-[0.92rem] leading-[1.7] text-[color:var(--muted)]">
-                Open this article in Google Translate using the language set in your browser.
-              </p>
-              <TranslateButton />
             </div>
           </aside>
         </div>

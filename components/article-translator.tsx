@@ -46,12 +46,13 @@ function slugifyTag(tag: string) {
 }
 
 async function translateValue(text: string, target: string, format: 'text' | 'html' = 'text') {
-  const response = await fetch('/api/translate', {
-    method: 'POST',
-    headers: {
-      'Content-Type': 'application/json',
-    },
-    body: JSON.stringify({
+  const translateBase = process.env.NEXT_PUBLIC_LIBRETRANSLATE_URL || 'https://translate.cutie.dating';
+  const response = await fetch(`${translateBase.replace(/\/+$/, '')}/translate`, {
+      method: 'POST',
+      headers: {
+        'Content-Type': 'application/json',
+      },
+      body: JSON.stringify({
       text,
       source: 'en',
       target,
@@ -142,8 +143,8 @@ export function ArticleTranslator({ post }: { post: BlogPost }) {
   }
 
   return (
-    <article className="rounded-[12px] border border-[color:var(--border)] bg-[color:var(--card)] p-7 sm:p-8">
-      <div className="mb-8 flex flex-wrap items-start justify-between gap-4 border-b border-[color:var(--border)] pb-6">
+    <article className="rounded-[16px] border border-[rgba(0,255,200,0.12)] bg-[rgba(8,11,20,0.88)] p-7 sm:p-8 shadow-[0_0_0_1px_rgba(255,255,255,0.03)_inset]">
+      <div className="mb-8 flex flex-wrap items-start justify-between gap-4 border-b border-[rgba(255,255,255,0.06)] pb-6">
         <div className="max-w-3xl">
           <h1 className="font-display text-[clamp(2.4rem,4vw,4.6rem)] font-extrabold leading-[0.95] tracking-[-0.03em]">
             {state.title}

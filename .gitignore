@@ -1,1 +1,9 @@
-*.zip
+node_modules
+.next
+.vercel
+.DS_Store
+*.log
+*.tsbuildinfo
+public/sitemap.xml
+public/rss.xml
+public/robots.txt

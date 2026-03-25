@@ -1,0 +1,37 @@
+{
+  "name": "oler",
+  "private": true,
+  "version": "0.1.0",
+  "type": "module",
+  "scripts": {
+    "predev": "npm run generate:seo",
+    "dev": "next dev",
+    "build": "npm run generate:seo && next build",
+    "start": "next start",
+    "typecheck": "tsc --noEmit",
+    "generate:seo": "node scripts/generate-seo.mjs"
+  },
+  "dependencies": {
+    "clsx": "^2.1.1",
+    "feed": "^5.2.0",
+    "gray-matter": "^4.0.3",
+    "next": "^16.2.1",
+    "react": "^19.2.4",
+    "react-dom": "^19.2.4",
+    "reading-time": "^1.5.0",
+    "remark": "^15.0.1",
+    "remark-gfm": "^4.0.1",
+    "remark-html": "^16.0.1"
+  },
+  "devDependencies": {
+    "@tailwindcss/forms": "^0.5.11",
+    "@tailwindcss/postcss": "^4.2.2",
+    "@tailwindcss/typography": "^0.5.19",
+    "@types/node": "^25.5.0",
+    "@types/react": "^19.2.14",
+    "@types/react-dom": "^19.2.3",
+    "postcss": "^8.5.8",
+    "tailwindcss": "^4.2.2",
+    "typescript": "^6.0.2"
+  }
+}

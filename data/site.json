@@ -1,0 +1,134 @@
+{
+  "name": "Rodrigo Oler",
+  "title": "Rodrigo Oler — Senior Engineer · 3x Co-Founder · 2x CTO",
+  "description": "Senior software engineer, founder, and CTO focused on scalable products, editorial systems, SEO-first publishing, and fast-moving product teams.",
+  "url": "https://oler.pages.dev",
+  "locale": "en",
+  "email": "roodrigoprogrammer@gmail.com",
+  "github": "https://github.com/rodrigooler",
+  "linkedin": "https://www.linkedin.com/in/rodrigooler/",
+  "avatar": "https://github.com/rodrigooler.png",
+  "location": "São Paulo, Brazil",
+  "availability": "Open to senior/lead engineering, founding teams, and selective consulting.",
+  "focus": ["TypeScript", "React", "Next.js", "SEO", "AI", "Web3"],
+  "metrics": [
+    { "value": "14+", "label": "years shipping" },
+    { "value": "3x", "label": "founder" },
+    { "value": "2x", "label": "cto" },
+    { "value": "$200M+", "label": "volume shipped" }
+  ],
+  "navigation": [
+    { "label": "Home", "href": "/" },
+    { "label": "Blog", "href": "/blog" },
+    { "label": "CV", "href": "/cv" },
+    { "label": "Contact", "href": "mailto:roodrigoprogrammer@gmail.com" }
+  ],
+  "experience": [
+    {
+      "period": "Apr 2025 - Mar 2026",
+      "company": "Torus Network",
+      "role": "Senior Software Engineer",
+      "summary": "Built scalable Web3 delivery in a Turborepo and Next.js monorepo, reduced bridge flows by 60-70%, and cut CI/CD time by about 85%.",
+      "tags": ["Next.js", "TypeScript", "Web3", "Turborepo", "SSR"]
+    },
+    {
+      "period": "Sep 2024 - Apr 2025",
+      "company": "Onda Finance",
+      "role": "Co-Founder & CTO",
+      "summary": "Took a high-frequency OTC platform from MVP to more than $200M in volume with Fireblocks, multi-region AWS, Terraform, and a strong release cadence.",
+      "tags": ["Node.js", "AWS", "Fireblocks", "Terraform", "PIX", "USDT"]
+    },
+    {
+      "period": "Oct 2022 - Present",
+      "company": "Date a Home Brasil",
+      "role": "Advisor & Investor",
+      "summary": "Strategic equity holder supporting fundraising, investor conversations, and product direction after helping build the platform and delivery pipelines.",
+      "tags": ["Angular", "NestJS", "PostgreSQL", "AWS", "CircleCI"]
+    },
+    {
+      "period": "Oct 2022 - Sep 2025",
+      "company": "Codechain",
+      "role": "Senior Software Engineer",
+      "summary": "Embedded across several client products, delivering product builds, automation, and AWS consulting in short and medium-term cycles.",
+      "tags": ["Node.js", "AWS", "TypeScript", "REST", "Cloud"]
+    },
+    {
+      "period": "Aug 2022 - Jul 2023",
+      "company": "Higher Order Company / UwU Games",
+      "role": "Head of Front-End",
+      "summary": "Led frontend delivery for a blockchain game powered by HVM, while shipping internal tools and reusable UI systems.",
+      "tags": ["Kindelia", "HVM", "Frontend", "UI Systems"]
+    },
+    {
+      "period": "Jan 2018 - Apr 2025",
+      "company": "Brokerse",
+      "role": "Co-Founder & CTO",
+      "summary": "Built low-latency trading systems with CCXT and Node.js for OTC and copy-trade workflows, plus remote-first delivery and blockchain consulting.",
+      "tags": ["Node.js", "CCXT", "WebSockets", "Solidity", "OKRs"]
+    }
+  ],
+  "skills": [
+    "TypeScript",
+    "React",
+    "Next.js",
+    "Node.js",
+    "AWS",
+    "PostgreSQL",
+    "Docker",
+    "CI/CD",
+    "SEO",
+    "Analytics",
+    "AI / LLMs",
+    "Web3"
+  ],
+  "projects": [
+    {
+      "name": "Onda Finance - OTC Platform",
+      "summary": "High-frequency OTC trading platform handling PIX, USD, and USDT settlements. Scaled from zero to more than $200M in volume with zero downtime.",
+      "tags": ["Next.js", "Node.js", "AWS", "Fireblocks"]
+    },
+    {
+      "name": "Torus Network - Token Bridge",
+      "summary": "Layer-1 blockchain wallet, bridge, and allocator systems. Refactored bridge workflows and reduced transaction time by 60-70%.",
+      "tags": ["Web3", "Next.js", "Turborepo", "SSR"]
+    },
+    {
+      "name": "Multi-Exchange Trading Engine",
+      "summary": "Low-latency trading engine with CCXT for real-time OTC and copy-trade across major liquidity providers.",
+      "tags": ["Node.js", "CCXT", "WebSockets"]
+    },
+    {
+      "name": "Raxion",
+      "summary": "Solo-founder project: sovereign SVM rollup on Solana focused on verifiable AI inference quality and statistical verification.",
+      "tags": ["Solana", "AI", "PoIQ", "Solo Founder"],
+      "link": "https://github.com/rodrigooler/raxion"
+    }
+  ],
+  "testimonials": [
+    {
+      "name": "Ronaldo Lima",
+      "role": "Lead Developer at Amplify",
+      "quote": "What stood out early was how quickly he connected architecture decisions to real business needs and how naturally he took ownership of complex problems."
+    },
+    {
+      "name": "Renato Benkendorf",
+      "role": "Staff Engineer · Gen-AI & LLMs",
+      "quote": "He combines a strong engineering mindset with the ability to make hard decisions under pressure."
+    },
+    {
+      "name": "Guilherme Esteves",
+      "role": "CTO & Backend Engineer",
+      "quote": "He is an exceptional developer and genuinely passionate about technology."
+    },
+    {
+      "name": "Felippe Rodrigo Puhle",
+      "role": "Software Engineer",
+      "quote": "Proactive, dedicated, and always suggesting strong ideas to solve problems quickly."
+    }
+  ],
+  "blog": {
+    "title": "Writing about shipping, systems, and SEO",
+    "description": "A technical blog built around Markdown, internal linking, and consistent publishing.",
+    "perPage": 6
+  }
+}

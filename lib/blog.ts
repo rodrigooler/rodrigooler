@@ -26,6 +26,7 @@ export type BlogPostMeta = PostFrontmatter & {
   readingTime: string;
   readingMinutes: number;
   excerpt: string;
+  lastModified: string;
 };
 
 export type BlogPost = BlogPostMeta & {
@@ -46,6 +47,7 @@ function parseFrontmatter(filePath: string) {
   const { content, data } = matter(raw);
   const frontmatter = data as Partial<PostFrontmatter>;
   const stats = readingTime(content);
+  const lastModified = fs.statSync(filePath).mtime.toISOString();
 
   if (!frontmatter.title || !frontmatter.description || !frontmatter.date || !frontmatter.tags) {
     throw new Error(`Invalid blog frontmatter in ${filePath}`);
@@ -66,6 +68,7 @@ function parseFrontmatter(filePath: string) {
       readingTime: stats.text,
       readingMinutes: Math.max(1, Math.round(stats.minutes)),
       excerpt: frontmatter.description,
+      lastModified,
     } satisfies BlogPostMeta,
   };
 }

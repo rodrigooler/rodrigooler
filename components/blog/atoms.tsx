@@ -25,21 +25,27 @@ export function BlogHeader() {
         <Link href="/" className="transition hover:text-[color:var(--text)]">
           Home
         </Link>
+        <Link href="/about" className="transition hover:text-[color:var(--text)]">
+          About
+        </Link>
         <Link href="/cv" className="transition hover:text-[color:var(--text)]">
           CV
         </Link>
         <Link href="/blog" className="transition hover:text-[color:var(--text)]">
           Blog
         </Link>
+        <Link href="/blog/topics" className="transition hover:text-[color:var(--text)]">
+          Topics
+        </Link>
         <a href={`mailto:${site.email}`} className="transition hover:text-[color:var(--text)]">
           Contact
         </a>
       </nav>
       <Link
-        href="/cv"
+        href="/about"
         className="rounded-[6px] border border-[color:var(--border-neon)] bg-[color:var(--neon-dim)] px-[18px] py-2 font-mono text-[0.82rem] font-medium tracking-[1px] text-[color:var(--neon)] transition hover:bg-[rgba(0,255,200,0.2)] hover:shadow-[var(--glow)]"
       >
-        ↗ CV / PDF
+        ↗ About
       </Link>
     </header>
   );

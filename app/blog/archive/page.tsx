@@ -7,6 +7,9 @@ import { site } from '@/lib/site';
 export const metadata: Metadata = {
   title: 'Archive',
   description: `Full archive of articles from ${site.name}.`,
+  alternates: {
+    canonical: `${site.url}/blog/archive`,
+  },
 };
 
 export default async function Page() {

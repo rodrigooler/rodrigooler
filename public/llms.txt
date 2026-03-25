@@ -1,0 +1,35 @@
+# Rodrigo Oler
+
+Senior software engineer, founder, and CTO focused on scalable products, editorial systems, SEO-first publishing, and fast-moving product teams.
+
+## Key pages
+- https://oler.pages.dev/
+- https://oler.pages.dev/about
+- https://oler.pages.dev/blog
+- https://oler.pages.dev/blog/topics
+- https://oler.pages.dev/blog/archive
+- https://oler.pages.dev/cv
+- https://oler.pages.dev/rss.xml
+- https://oler.pages.dev/sitemap.xml
+
+## Topic hubs
+- https://oler.pages.dev/blog/topics/frontend-systems — Architecture notes for building and debugging modern frontends with TypeScript, React, Angular, SCSS, and Next.js.
+- https://oler.pages.dev/blog/topics/devtools-macos — Practical guides for macOS maintenance, CLI workflows, Docker issues, Xcode cleanup, and storage recovery.
+- https://oler.pages.dev/blog/topics/automation-agents — Content about agent-driven workflows, automation defaults, and the operational shift away from manual command-line interaction.
+- https://oler.pages.dev/blog/topics/web3-trading — Articles about exchange APIs, trading workflows, settlement systems, and blockchain-adjacent infrastructure.
+
+## Recent articles
+- https://oler.pages.dev/blog/elevenlabs-cli-agent-first-automation — Why removing interactivity as the default makes a CLI more predictable, automatable, and suitable for agent-driven workflows.
+- https://oler.pages.dev/blog/how-to-safely-remove-xcode-without-breaking-command-line-tools-clt-191l — Free up disk space on your Mac by removing Xcode while keeping Command Line Tools fully functional for development.
+- https://oler.pages.dev/blog/how-to-free-up-space-on-your-macs-ssd-256gb-1d1d — Learn how to free up space on your Mac's SSD using simple Terminal commands
+- https://oler.pages.dev/blog/fixing-dockers-malware-warning-on-mac-os-sequoia-4fl4 — A quick solution to fix Docker's malware warning on Mac OS Sequoia.
+- https://oler.pages.dev/blog/introduction-to-let-in-angular-18-cm6 — Angular 18 has an exciting new feature under development for developers: the @let directive. This tool will help you create variables quickly and easily within HTML code. It's important to note that this feature is still being developed and has not yet been merged into a release within Angular 18. Let's understand how it works and look at some cool examples of its potential use.
+- https://oler.pages.dev/blog/resolving-viewport-duplication-in-nextjs-134-51lm — An effective solution to the issue of duplicating the viewport tag in Next.js 13 when defining the viewport directly in components.
+- https://oler.pages.dev/blog/calculating-the-average-execution-price-of-market-orders-on-the-binance-api-36f8 — Learn how to calculate the average execution price for market orders using the Binance API
+- https://oler.pages.dev/blog/using-mixins-with-scss-to-create-breakpoints-8g6 — Enhancing the organization of responsive CSS with mixins and SCSS
+
+## Notes
+- Blog posts are written in English.
+- Content is Markdown-first and rendered statically at build time.
+- Canonical URLs are preserved for republished articles.
+- Sitemap, RSS, and social images are generated from the same source files.

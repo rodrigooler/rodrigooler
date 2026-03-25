@@ -4,6 +4,7 @@ import { notFound } from 'next/navigation';
 import { BlogIndexPage } from '@/components/blog-page';
 import { getAllPosts, getAllTags, getPaginatedPosts } from '@/lib/blog';
 import { site } from '@/lib/site';
+import { getTopicCounts } from '@/lib/topics';
 
 type Params = Promise<{ page: string }>;
 
@@ -21,6 +22,9 @@ export async function generateMetadata({ params }: { params: Params }): Promise<
   return {
     title: `Blog page ${page}`,
     description: site.blog.description,
+    alternates: {
+      canonical: `${site.url}/blog/page/${page}`,
+    },
   };
 }
 
@@ -32,14 +36,28 @@ export default async function Page({ params }: { params: Params }) {
     notFound();
   }
 
-  const [{ posts, totalPages, page: safePage }, tags] = await Promise.all([
+  const [pageData, tags, allPosts] = await Promise.all([
     getPaginatedPosts(pageNumber),
     getAllTags(),
+    getAllPosts(),
   ]);
 
-  if (pageNumber > totalPages) {
+  if (pageNumber > pageData.totalPages) {
     notFound();
   }
 
-  return <BlogIndexPage posts={posts} tags={tags} currentPage={safePage} totalPages={totalPages} />;
+  return (
+    <BlogIndexPage
+      posts={pageData.posts}
+      tags={tags}
+      currentPage={pageData.page}
+      totalPages={pageData.totalPages}
+      breadcrumbs={[
+        { label: 'Home', href: '/' },
+        { label: 'Blog', href: '/blog' },
+        { label: `Page ${pageData.page}`, href: `/blog/page/${pageData.page}` },
+      ]}
+      topicCounts={getTopicCounts(allPosts)}
+    />
+  );
 }

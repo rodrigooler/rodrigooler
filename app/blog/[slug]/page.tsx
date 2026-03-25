@@ -33,11 +33,21 @@ export async function generateMetadata({ params }: { params: Params }): Promise<
       title: post.title,
       description: post.description,
       publishedTime: post.date,
+      modifiedTime: post.lastModified,
+      images: [
+        {
+          url: `/og-images/${post.slug}.svg`,
+          width: 1200,
+          height: 630,
+          alt: post.title,
+        },
+      ],
     },
     twitter: {
       card: 'summary_large_image',
       title: post.title,
       description: post.description,
+      images: [`/og-images/${post.slug}.svg`],
     },
   };
 }
@@ -66,7 +76,7 @@ export default async function Page({ params }: { params: Params }) {
     headline: post.title,
     description: post.description,
     datePublished: post.date,
-    dateModified: post.date,
+    dateModified: post.lastModified,
     author: {
       '@type': 'Person',
       name: site.name,
@@ -78,7 +88,15 @@ export default async function Page({ params }: { params: Params }) {
   return (
     <>
       <SeoJsonLd data={jsonLd} />
-      <BlogPostPage post={post} relatedPosts={relatedPosts} />
+      <BlogPostPage
+        post={post}
+        relatedPosts={relatedPosts}
+        breadcrumbs={[
+          { label: 'Home', href: '/' },
+          { label: 'Blog', href: '/blog' },
+          { label: post.title, href: `/blog/${post.slug}` },
+        ]}
+      />
     </>
   );
 }

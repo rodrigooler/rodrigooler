@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="1200" height="630" viewBox="0 0 1200 630" fill="none" xmlns="http://www.w3.org/2000/svg">
+  <defs>
+    <linearGradient id="bg" x1="0" y1="0" x2="1200" y2="630" gradientUnits="userSpaceOnUse">
+      <stop offset="0" stop-color="#04060d"/>
+      <stop offset="1" stop-color="#0b1020"/>
+    </linearGradient>
+    <linearGradient id="accent" x1="0" y1="0" x2="1200" y2="0" gradientUnits="userSpaceOnUse">
+      <stop offset="0" stop-color="#00ffc8"/>
+      <stop offset="0.5" stop-color="#6e4dff"/>
+      <stop offset="1" stop-color="#ff2d9b"/>
+    </linearGradient>
+  </defs>
+  <rect width="1200" height="630" fill="url(#bg)" />
+  <rect x="48" y="48" width="1104" height="534" rx="26" fill="#080b14" fill-opacity="0.96" stroke="#00ffc8" stroke-opacity="0.16" />
+  <rect x="80" y="80" width="120" height="6" rx="3" fill="url(#accent)" />
+  <text x="80" y="142" fill="#00ffc8" font-family="Inter, Arial, sans-serif" font-size="24" letter-spacing="4">RODRIGO OLER</text>
+  <text x="80" y="186" fill="#6e7a9f" font-family="Inter, Arial, sans-serif" font-size="18">Rodrigo Oler · blog</text>
+  <text x="80" y="280" fill="#e8eeff" font-family="Inter, Arial, sans-serif" font-size="56" font-weight="800">Introduction to @let in</text>
+  <text x="80" y="354" fill="#e8eeff" font-family="Inter, Arial, sans-serif" font-size="56" font-weight="800">Angular 18</text>
+  <text x="80" y="520" fill="#6e7a9f" font-family="IBM Plex Mono, monospace" font-size="18">Angular 18 has an exciting new feature under development for developers: the @let directive. This tool will help you create variables quickly and easily within HTML code. It&apos;s important to note that this feature is still being developed and has not yet been merged into a release within Angular 18. Let&apos;s understand how it works and look at some cool examples of its potential use.</text>
+  <text x="80" y="560" fill="#00ffc8" font-family="IBM Plex Mono, monospace" font-size="16" letter-spacing="1.5">ANGULAR · ANGULAR18 · FRONT · FRONTEND</text>
+</svg>

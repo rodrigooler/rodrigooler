@@ -13,37 +13,6 @@ const siteTitle = 'Rodrigo Oler';
 const siteDescription =
   'Senior software engineer, founder, and CTO focused on scalable products, editorial systems, SEO-first publishing, and fast-moving product teams.';
 
-const topics = [
-  {
-    slug: 'frontend-systems',
-    title: 'Frontend Systems',
-    description:
-      'Architecture notes for building and debugging modern frontends with TypeScript, React, Angular, SCSS, and Next.js.',
-    tags: ['nextjs', 'react', 'typescript', 'angular', 'angular18', 'frontend', 'front', 'css', 'scss', 'mixins', 'responsivedesign'],
-  },
-  {
-    slug: 'devtools-macos',
-    title: 'macOS & DevTools',
-    description:
-      'Practical guides for macOS maintenance, CLI workflows, Docker issues, Xcode cleanup, and storage recovery.',
-    tags: ['macos', 'xcode', 'terminal', 'developertools', 'docker', 'malware', 'cleanup', 'ssd', 'storage', 'mac'],
-  },
-  {
-    slug: 'automation-agents',
-    title: 'Automation & Agents',
-    description:
-      'Content about agent-driven workflows, automation defaults, and the operational shift away from manual command-line interaction.',
-    tags: ['cli', 'automation', 'ai', 'agents', 'developer-tools'],
-  },
-  {
-    slug: 'web3-trading',
-    title: 'Web3 & Trading',
-    description:
-      'Articles about exchange APIs, trading workflows, settlement systems, and blockchain-adjacent infrastructure.',
-    tags: ['binance', 'api', 'crypto', 'trading', 'web3', 'ccxt', 'solana', 'solidity'],
-  },
-];
-
 function slugify(value) {
   return value
     .toLowerCase()
@@ -137,11 +106,6 @@ async function writeFile(filePath, content) {
   await fs.writeFile(filePath, content, 'utf8');
 }
 
-function matchesTopic(topic, post) {
-  const topicTags = new Set(topic.tags.map((tag) => slugify(tag)));
-  return post.tags.some((tag) => topicTags.has(slugify(tag)));
-}
-
 function buildOgImage(post) {
   const lines = wrapText(post.title, 26, 3);
   const tagLine = post.tags.slice(0, 4).join(' · ').toUpperCase();
@@ -178,27 +142,10 @@ async function buildSitemap(posts) {
   const totalPages = Math.max(1, Math.ceil(posts.length / 6));
   const latestPostMod = posts[0]?.lastModified ?? new Date().toISOString();
   const tagMap = new Map();
-  const topicPages = [];
-
-  for (const topic of topics) {
-    const topicPosts = posts.filter((post) => matchesTopic(topic, post));
-    if (!topicPosts.length) continue;
-    const lastmod = topicPosts.reduce(
-      (latest, post) =>
-        new Date(post.lastModified).getTime() > new Date(latest).getTime() ? post.lastModified : latest,
-      topicPosts[0].lastModified,
-    );
-    topicPages.push({
-      loc: `${siteUrl}/blog/topics/${topic.slug}`,
-      lastmod,
-    });
-  }
 
   const urls = [
     { loc: `${siteUrl}/`, lastmod: await fileLastModified(path.join(root, 'index.html')) },
-    { loc: `${siteUrl}/about`, lastmod: await fileLastModified(path.join(root, 'app/about/page.tsx')) },
     { loc: `${siteUrl}/blog`, lastmod: latestPostMod },
-    { loc: `${siteUrl}/blog/topics`, lastmod: latestPostMod },
     { loc: `${siteUrl}/blog/archive`, lastmod: latestPostMod },
     { loc: `${siteUrl}/cv`, lastmod: await fileLastModified(path.join(root, 'cv.html')) },
   ];
@@ -228,7 +175,6 @@ async function buildSitemap(posts) {
     }
   }
 
-  urls.push(...topicPages);
   urls.push(...tagMap.values());
 
   const xml = `<?xml version="1.0" encoding="UTF-8"?>\n` +
@@ -283,18 +229,11 @@ function buildLlmTxt(posts) {
   lines.push('');
   lines.push('## Key pages');
   lines.push(`- ${siteUrl}/`);
-  lines.push(`- ${siteUrl}/about`);
   lines.push(`- ${siteUrl}/blog`);
-  lines.push(`- ${siteUrl}/blog/topics`);
   lines.push(`- ${siteUrl}/blog/archive`);
   lines.push(`- ${siteUrl}/cv`);
   lines.push(`- ${siteUrl}/rss.xml`);
   lines.push(`- ${siteUrl}/sitemap.xml`);
-  lines.push('');
-  lines.push('## Topic hubs');
-  for (const topic of topics) {
-    lines.push(`- ${siteUrl}/blog/topics/${topic.slug} — ${topic.description}`);
-  }
   lines.push('');
   lines.push('## Recent articles');
   for (const post of posts.slice(0, 8)) {

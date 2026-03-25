@@ -3,12 +3,10 @@ import Link from 'next/link';
 import { Breadcrumbs } from '@/components/breadcrumbs';
 import { ArticleTranslator } from '@/components/article-translator';
 import { BlogBackground, BlogHeader, SectionLabel } from '@/components/blog/atoms';
-import { ArticleCard, Marquee, TagPill, TerminalPreview, TopicCard } from '@/components/blog/molecules';
+import { ArticleCard, Marquee, TagPill, TerminalPreview } from '@/components/blog/molecules';
 import { formatPostDate, slugifyTag } from '@/lib/blog';
 import type { BlogPost, BlogPostMeta } from '@/lib/blog';
 import type { BreadcrumbItem } from '@/components/breadcrumbs';
-import type { TopicDefinition } from '@/lib/topics';
-import { getTopicCounts } from '@/lib/topics';
 
 function BlogHero({ posts }: { posts: BlogPostMeta[] }) {
   const latest = posts[0];
@@ -123,17 +121,13 @@ export function BlogIndexPage({
   currentPage,
   totalPages,
   breadcrumbs = [],
-  topicCounts,
 }: {
   posts: BlogPostMeta[];
   tags: Array<{ tag: string; count: number }>;
   currentPage: number;
   totalPages: number;
   breadcrumbs?: BreadcrumbItem[];
-  topicCounts?: Array<TopicDefinition & { count: number }>;
 }) {
-  const resolvedTopicCounts = topicCounts ?? getTopicCounts(posts);
-
   return (
     <main className="relative overflow-hidden">
       <BlogBackground />
@@ -186,26 +180,6 @@ export function BlogIndexPage({
         </div>
 
         <PaginationControls currentPage={currentPage} totalPages={totalPages} />
-      </section>
-
-      <section className="border-y border-[color:var(--border)] px-[5vw] py-[100px] lg:px-[8vw]">
-        <SectionLabel>Topic hubs</SectionLabel>
-        <h2 className="mb-4 font-display text-[clamp(2rem,3.5vw,3rem)] font-extrabold leading-[1.05] tracking-[-0.02em]">
-          Curated clusters for search and readers.
-        </h2>
-        <p className="mb-12 max-w-[560px] text-[1rem] leading-[1.6] text-[color:var(--muted)]">
-          Topic pages collect related posts, strengthen internal linking, and make the blog easier to crawl.
-        </p>
-        <div className="grid gap-4 md:grid-cols-2">
-          {resolvedTopicCounts.map((topic) => (
-            <TopicCard key={topic.slug} topic={topic} count={topic.count} href={`/blog/topics/${topic.slug}`} />
-          ))}
-        </div>
-        <div className="mt-6">
-          <Link href="/blog/topics" className="border-b border-[rgba(0,255,200,0.25)] font-mono text-[0.75rem] text-white">
-            Explore all hubs
-          </Link>
-        </div>
       </section>
 
       <section className="border-y border-[color:var(--border)] px-[5vw] py-[100px] lg:px-[8vw]">
@@ -337,76 +311,6 @@ export function BlogArchivePage({ posts }: { posts: BlogPostMeta[] }) {
             </div>
           </section>
         ))}
-      </section>
-    </main>
-  );
-}
-
-export function BlogTopicsPage({ topics }: { topics: Array<TopicDefinition & { count: number }> }) {
-  return (
-    <main className="relative overflow-hidden">
-      <BlogBackground />
-      <BlogHeader />
-      <section className="grid min-h-[60vh] place-items-center px-[5vw] pt-24 lg:px-[8vw]">
-        <div className="max-w-4xl">
-          <Breadcrumbs items={[{ label: 'Home', href: '/' }, { label: 'Blog', href: '/blog' }, { label: 'Topics', href: '/blog/topics' }]} />
-          <SectionLabel>Topic hubs</SectionLabel>
-          <h1 className="font-display text-[clamp(3rem,5.5vw,5rem)] font-extrabold leading-[0.95] tracking-[-0.03em]">
-            Explore by
-            <span className="block text-[color:var(--neon)] [-webkit-text-stroke:1px_var(--neon)]">focus area.</span>
-          </h1>
-          <p className="mt-6 max-w-3xl text-[1rem] leading-[1.7] text-[color:var(--muted)]">
-            Curated landing pages that group related articles, reinforce internal linking, and make each cluster easier
-            to understand for readers and crawlers.
-          </p>
-        </div>
-      </section>
-      <section className="px-[5vw] pb-[100px] lg:px-[8vw]">
-        <div className="grid gap-4 md:grid-cols-2">
-          {topics.map((topic) => (
-            <TopicCard key={topic.slug} topic={topic} count={topic.count} href={`/blog/topics/${topic.slug}`} />
-          ))}
-        </div>
-      </section>
-    </main>
-  );
-}
-
-export function BlogTopicPage({
-  topic,
-  posts,
-  breadcrumbs = [],
-}: {
-  topic: TopicDefinition;
-  posts: BlogPostMeta[];
-  breadcrumbs?: BreadcrumbItem[];
-}) {
-  return (
-    <main className="relative overflow-hidden">
-      <BlogBackground />
-      <BlogHeader />
-      <section className="grid min-h-[60vh] place-items-center px-[5vw] pt-24 lg:px-[8vw]">
-        <div className="max-w-4xl">
-          {breadcrumbs.length ? <Breadcrumbs items={breadcrumbs} /> : null}
-          <SectionLabel>{topic.eyebrow}</SectionLabel>
-          <h1 className="font-display text-[clamp(3rem,5.5vw,5rem)] font-extrabold leading-[0.95] tracking-[-0.03em]">
-            {topic.title}
-            <span className="block text-[color:var(--neon)] [-webkit-text-stroke:1px_var(--neon)]">
-              {posts.length} article{posts.length === 1 ? '' : 's'}.
-            </span>
-          </h1>
-          <p className="mt-6 max-w-3xl text-[1rem] leading-[1.7] text-[color:var(--muted)]">{topic.description}</p>
-          <p className="mt-4 max-w-3xl font-mono text-[0.85rem] leading-[1.7] text-[color:var(--muted)]">
-            Search intent: {topic.searchIntent}
-          </p>
-        </div>
-      </section>
-      <section className="px-[5vw] pb-[100px] lg:px-[8vw]">
-        <div className="mb-8 grid gap-4 md:grid-cols-2 xl:grid-cols-3">
-          {posts.map((post) => (
-            <ArticleCard key={post.slug} post={post} />
-          ))}
-        </div>
       </section>
     </main>
   );

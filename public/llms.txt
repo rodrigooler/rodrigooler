@@ -4,19 +4,11 @@ Senior software engineer, founder, and CTO focused on scalable products, editori
 
 ## Key pages
 - https://oler.pages.dev/
-- https://oler.pages.dev/about
 - https://oler.pages.dev/blog
-- https://oler.pages.dev/blog/topics
 - https://oler.pages.dev/blog/archive
 - https://oler.pages.dev/cv
 - https://oler.pages.dev/rss.xml
 - https://oler.pages.dev/sitemap.xml
-
-## Topic hubs
-- https://oler.pages.dev/blog/topics/frontend-systems — Architecture notes for building and debugging modern frontends with TypeScript, React, Angular, SCSS, and Next.js.
-- https://oler.pages.dev/blog/topics/devtools-macos — Practical guides for macOS maintenance, CLI workflows, Docker issues, Xcode cleanup, and storage recovery.
-- https://oler.pages.dev/blog/topics/automation-agents — Content about agent-driven workflows, automation defaults, and the operational shift away from manual command-line interaction.
-- https://oler.pages.dev/blog/topics/web3-trading — Articles about exchange APIs, trading workflows, settlement systems, and blockchain-adjacent infrastructure.
 
 ## Recent articles
 - https://oler.pages.dev/blog/elevenlabs-cli-agent-first-automation — Why removing interactivity as the default makes a CLI more predictable, automatable, and suitable for agent-driven workflows.

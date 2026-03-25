@@ -19,9 +19,7 @@
   ],
   "navigation": [
     { "label": "Home", "href": "/" },
-    { "label": "About", "href": "/about" },
     { "label": "Blog", "href": "/blog" },
-    { "label": "Topics", "href": "/blog/topics" },
     { "label": "CV", "href": "/cv" },
     { "label": "Contact", "href": "mailto:roodrigoprogrammer@gmail.com" }
   ],

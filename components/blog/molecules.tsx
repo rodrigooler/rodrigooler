@@ -2,7 +2,6 @@ import Link from 'next/link';
 
 import { formatPostDate, slugifyTag } from '@/lib/blog';
 import type { BlogPostMeta } from '@/lib/blog';
-import type { TopicDefinition } from '@/lib/topics';
 
 function tagClass(kind: 'tag' | 'pill' = 'tag') {
   return kind === 'pill'
@@ -55,28 +54,6 @@ export function ArticleCard({ post }: { post: BlogPostMeta }) {
         </Link>
       </div>
     </article>
-  );
-}
-
-export function TopicCard({ topic, count, href }: { topic: TopicDefinition; count: number; href: string }) {
-  return (
-    <Link
-      href={href}
-      className="group rounded-[12px] border border-[color:var(--border)] bg-[color:var(--card)] p-7 transition hover:-translate-y-1 hover:border-[rgba(0,255,200,0.2)]"
-    >
-      <div className="mb-3 font-mono text-[0.72rem] uppercase tracking-[2px] text-[color:var(--muted)]">
-        {topic.eyebrow}
-      </div>
-      <div className="flex items-start justify-between gap-4">
-        <h3 className="font-display text-[1.25rem] font-bold text-white transition group-hover:text-[color:var(--neon)]">
-          {topic.title}
-        </h3>
-        <span className="rounded-[999px] border border-[rgba(0,255,200,0.15)] bg-[rgba(0,255,200,0.07)] px-3 py-1 font-mono text-[0.72rem] text-[color:var(--neon)]">
-          {count}
-        </span>
-      </div>
-      <p className="mt-4 text-[0.92rem] leading-[1.65] text-[color:var(--muted)]">{topic.summary}</p>
-    </Link>
   );
 }
 

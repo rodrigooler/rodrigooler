@@ -4,7 +4,6 @@ import { notFound } from 'next/navigation';
 import { BlogIndexPage } from '@/components/blog-page';
 import { getAllPosts, getAllTags, getPaginatedPosts } from '@/lib/blog';
 import { site } from '@/lib/site';
-import { getTopicCounts } from '@/lib/topics';
 
 type Params = Promise<{ page: string }>;
 
@@ -36,10 +35,9 @@ export default async function Page({ params }: { params: Params }) {
     notFound();
   }
 
-  const [pageData, tags, allPosts] = await Promise.all([
+  const [pageData, tags] = await Promise.all([
     getPaginatedPosts(pageNumber),
     getAllTags(),
-    getAllPosts(),
   ]);
 
   if (pageNumber > pageData.totalPages) {
@@ -57,7 +55,6 @@ export default async function Page({ params }: { params: Params }) {
         { label: 'Blog', href: '/blog' },
         { label: `Page ${pageData.page}`, href: `/blog/page/${pageData.page}` },
       ]}
-      topicCounts={getTopicCounts(allPosts)}
     />
   );
 }

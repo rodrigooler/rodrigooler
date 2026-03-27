@@ -13,6 +13,16 @@ const siteTitle = 'Rodrigo Oler';
 const siteDescription =
   'Senior software engineer, founder, and CTO focused on scalable products, editorial systems, SEO-first publishing, and fast-moving product teams.';
 
+function comparePostsByDateDesc(a, b) {
+  const dateDelta = new Date(b.date).getTime() - new Date(a.date).getTime();
+
+  if (dateDelta !== 0) {
+    return dateDelta;
+  }
+
+  return new Date(b.lastModified).getTime() - new Date(a.lastModified).getTime();
+}
+
 function slugify(value) {
   return value
     .toLowerCase()
@@ -87,7 +97,7 @@ async function readPosts() {
       });
     }
 
-    return posts.sort((a, b) => new Date(b.date).getTime() - new Date(a.date).getTime());
+    return posts.sort(comparePostsByDateDesc);
   } catch {
     return [];
   }

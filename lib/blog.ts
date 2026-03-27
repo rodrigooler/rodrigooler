@@ -33,6 +33,16 @@ export type BlogPost = BlogPostMeta & {
   contentHtml: string;
 };
 
+function comparePostsByDateDesc(a: { date: string; lastModified: string }, b: { date: string; lastModified: string }) {
+  const dateDelta = new Date(b.date).getTime() - new Date(a.date).getTime();
+
+  if (dateDelta !== 0) {
+    return dateDelta;
+  }
+
+  return new Date(b.lastModified).getTime() - new Date(a.lastModified).getTime();
+}
+
 function getPostFilePaths() {
   if (!fs.existsSync(postsDirectory)) return [];
   return fs
@@ -82,7 +92,7 @@ export async function getAllPosts() {
   const posts = getPostFilePaths()
     .map((filePath) => parseFrontmatter(filePath).meta)
     .filter((post) => !post.draft)
-    .sort((a, b) => +new Date(b.date) - +new Date(a.date));
+    .sort(comparePostsByDateDesc);
 
   return posts;
 }

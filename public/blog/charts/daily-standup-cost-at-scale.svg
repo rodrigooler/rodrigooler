@@ -1,0 +1,135 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="1200" height="720" viewBox="0 0 1200 720" fill="none" xmlns="http://www.w3.org/2000/svg" role="img" aria-labelledby="title desc">
+  <title id="title">Yearly hours lost at scale</title>
+  <desc id="desc">A dark themed bar chart comparing yearly hours lost in a 6 person startup and a 300 person company for 30 minute and 1 hour 30 minute daily standups.</desc>
+  <defs>
+    <linearGradient id="bg" x1="0" y1="0" x2="1200" y2="720" gradientUnits="userSpaceOnUse">
+      <stop offset="0" stop-color="#03050c"/>
+      <stop offset="1" stop-color="#0a1020"/>
+    </linearGradient>
+    <linearGradient id="card" x1="0" y1="0" x2="1200" y2="720" gradientUnits="userSpaceOnUse">
+      <stop offset="0" stop-color="#0b1020"/>
+      <stop offset="1" stop-color="#070b15"/>
+    </linearGradient>
+    <linearGradient id="teal" x1="0" y1="0" x2="0" y2="360" gradientUnits="userSpaceOnUse">
+      <stop offset="0" stop-color="#00ffc8"/>
+      <stop offset="1" stop-color="#40f6e0"/>
+    </linearGradient>
+    <linearGradient id="amber" x1="0" y1="0" x2="0" y2="360" gradientUnits="userSpaceOnUse">
+      <stop offset="0" stop-color="#ffbc4a"/>
+      <stop offset="1" stop-color="#f5d06f"/>
+    </linearGradient>
+    <filter id="glow" x="-40%" y="-40%" width="180%" height="180%">
+      <feGaussianBlur stdDeviation="10" result="blur" />
+      <feColorMatrix in="blur" type="matrix" values="1 0 0 0 0  0.7 1 0 0 0.6  0 0 1 0 0.4  0 0 0 1 0" />
+    </filter>
+    <filter id="softGlow" x="-40%" y="-40%" width="180%" height="180%">
+      <feGaussianBlur stdDeviation="4" result="blur" />
+      <feColorMatrix in="blur" type="matrix" values="0 0 0 0 0  0 1 0 0 0.95  0 0 0 0 0.8  0 0 0 0.92 0" />
+    </filter>
+  </defs>
+  <rect width="1200" height="720" fill="url(#bg)" />
+  <circle cx="950" cy="160" r="220" fill="#ffbc4a" fill-opacity="0.08" filter="url(#glow)" />
+  <circle cx="230" cy="120" r="170" fill="#00ffc8" fill-opacity="0.07" filter="url(#glow)" />
+  <rect x="44" y="44" width="1112" height="632" rx="30" fill="url(#card)" stroke="#00ffc8" stroke-opacity="0.16" />
+  <rect x="44" y="44" width="1112" height="632" rx="30" stroke="#ffffff" stroke-opacity="0.04" />
+  <rect x="84" y="80" width="124" height="6" rx="3" fill="url(#teal)" />
+  <text x="84" y="136" fill="#00ffc8" font-family="IBM Plex Mono, monospace" font-size="22" letter-spacing="4">RODRIGO OLER</text>
+  <text x="84" y="184" fill="#e8eeff" font-family="IBM Plex Sans, Arial, sans-serif" font-size="48" font-weight="800">Yearly hours lost at scale</text>
+  <text x="84" y="220" fill="#7d88a8" font-family="IBM Plex Mono, monospace" font-size="16" letter-spacing="0.6">Two panels, same ritual, very different amounts of waste</text>
+
+  <g transform="translate(84 258)">
+    <rect x="0" y="0" width="482" height="354" rx="22" fill="#070b15" fill-opacity="0.72" stroke="#ffffff" stroke-opacity="0.05" />
+    <rect x="550" y="0" width="482" height="354" rx="22" fill="#070b15" fill-opacity="0.72" stroke="#ffffff" stroke-opacity="0.05" />
+
+    <g font-family="IBM Plex Sans, Arial, sans-serif" font-size="18" fill="#e8eeff" font-weight="700">
+      <text x="34" y="42">6-person startup</text>
+      <text x="584" y="42">300-person company</text>
+    </g>
+
+    <g font-family="IBM Plex Mono, monospace" font-size="13" fill="#7d88a8">
+      <text x="34" y="72">yearly hours lost</text>
+      <text x="584" y="72">yearly hours lost</text>
+    </g>
+
+    <g transform="translate(34 92)">
+      <g opacity="0.55" stroke="#2b3558" stroke-dasharray="6 10">
+        <line x1="42" y1="34" x2="404" y2="34" />
+        <line x1="42" y1="112" x2="404" y2="112" />
+        <line x1="42" y1="190" x2="404" y2="190" />
+        <line x1="42" y1="268" x2="404" y2="268" />
+      </g>
+
+      <g font-family="IBM Plex Mono, monospace" font-size="12" fill="#7d88a8">
+        <text x="0" y="272">0h</text>
+        <text x="-2" y="194">600h</text>
+        <text x="-4" y="116">1.2k</text>
+        <text x="-2" y="38">2.4k</text>
+      </g>
+
+      <g filter="url(#softGlow)">
+        <rect x="118" y="174" width="62" height="94" rx="12" fill="url(#teal)" />
+        <rect x="220" y="82" width="62" height="186" rx="12" fill="url(#amber)" />
+        <rect x="118" y="170" width="62" height="8" rx="4" fill="#00ffc8" fill-opacity="0.35" />
+        <rect x="220" y="78" width="62" height="8" rx="4" fill="#ffbc4a" fill-opacity="0.45" />
+      </g>
+
+      <g font-family="IBM Plex Mono, monospace" font-size="14" fill="#e8eeff" text-anchor="middle">
+        <text x="149" y="160">780h</text>
+        <text x="251" y="68">2,340h</text>
+      </g>
+      <g font-family="IBM Plex Sans, Arial, sans-serif" font-size="14" fill="#c9d4f4" text-anchor="middle">
+        <text x="149" y="302">30 min</text>
+        <text x="251" y="302">1h 30m</text>
+      </g>
+
+      <rect x="118" y="286" width="62" height="2" rx="1" fill="#00ffc8" />
+      <rect x="220" y="286" width="62" height="2" rx="1" fill="#ffbc4a" />
+    </g>
+
+    <g transform="translate(584 92)">
+      <g opacity="0.55" stroke="#2b3558" stroke-dasharray="6 10">
+        <line x1="42" y1="34" x2="404" y2="34" />
+        <line x1="42" y1="112" x2="404" y2="112" />
+        <line x1="42" y1="190" x2="404" y2="190" />
+        <line x1="42" y1="268" x2="404" y2="268" />
+      </g>
+
+      <g font-family="IBM Plex Mono, monospace" font-size="12" fill="#7d88a8">
+        <text x="0" y="272">0h</text>
+        <text x="-2" y="194">40k</text>
+        <text x="-4" y="116">80k</text>
+        <text x="-2" y="38">120k</text>
+      </g>
+
+      <g filter="url(#softGlow)">
+        <rect x="118" y="176" width="62" height="92" rx="12" fill="url(#teal)" />
+        <rect x="220" y="84" width="62" height="184" rx="12" fill="url(#amber)" />
+        <rect x="118" y="172" width="62" height="8" rx="4" fill="#00ffc8" fill-opacity="0.35" />
+        <rect x="220" y="80" width="62" height="8" rx="4" fill="#ffbc4a" fill-opacity="0.45" />
+      </g>
+
+      <g font-family="IBM Plex Mono, monospace" font-size="14" fill="#e8eeff" text-anchor="middle">
+        <text x="149" y="162">39,000h</text>
+        <text x="251" y="70">117,000h</text>
+      </g>
+      <g font-family="IBM Plex Sans, Arial, sans-serif" font-size="14" fill="#c9d4f4" text-anchor="middle">
+        <text x="149" y="302">30 min</text>
+        <text x="251" y="302">1h 30m</text>
+      </g>
+
+      <rect x="118" y="286" width="62" height="2" rx="1" fill="#00ffc8" />
+      <rect x="220" y="286" width="62" height="2" rx="1" fill="#ffbc4a" />
+    </g>
+
+    <g transform="translate(748 18)">
+      <rect x="0" y="0" width="220" height="46" rx="14" fill="#090e1b" stroke="#ffffff" stroke-opacity="0.06" />
+      <circle cx="24" cy="23" r="6" fill="#00ffc8" />
+      <text x="40" y="28" fill="#c9d4f4" font-family="IBM Plex Mono, monospace" font-size="14">30 minutes</text>
+      <circle cx="142" cy="23" r="6" fill="#ffbc4a" />
+      <text x="158" y="28" fill="#c9d4f4" font-family="IBM Plex Mono, monospace" font-size="14">1 hour 30 minutes</text>
+    </g>
+  </g>
+
+  <text x="84" y="666" fill="#7d88a8" font-family="IBM Plex Mono, monospace" font-size="14">The ritual scales linearly. The waste does not feel linear once the team gets big.</text>
+</svg>

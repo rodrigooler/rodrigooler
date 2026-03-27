@@ -3,7 +3,7 @@ title: "Why Daily Standups Are Becoming Useless in the AI Era"
 description: "Daily standups used to be a coordination tool. Today, with better async workflows and AI-assisted status sharing, they often waste engineering time at scale."
 date: "2026-03-26"
 tags: ["agile", "standup", "ai", "productivity", "engineering"]
-readingTime: "5 min read"
+readingTime: "6 min read"
 featured: false
 ---
 
@@ -57,6 +57,14 @@ If the daily lasts **1 hour 30 minutes**:
 - per year: `390 hours`
 
 A single engineer can lose **130 to 390 hours per year** to a ritual that is supposed to save time.
+
+## Visualizing the waste
+
+The charts make the hidden tax easier to see.
+
+![Yearly hours lost per engineer from a daily standup](/blog/charts/daily-standup-cost-per-engineer.svg)
+
+![Yearly hours lost at scale from daily standups](/blog/charts/daily-standup-cost-at-scale.svg)
 
 ### 6-person startup
 

@@ -11,7 +11,9 @@ Daily standups were supposed to improve coordination.
 
 In practice, they often became a ritual that consumes engineering time without producing much value. That problem existed long before AI. The difference now is that AI, better async tooling, and more mature engineering workflows make the cost harder to justify.
 
-If a team is spending 30 minutes to 1 hour and 30 minutes every day on a daily standup, the math gets ugly very quickly.
+Strictly speaking, "daily" is the cadence and "standup" is the ceremony. In practice, people usually say "daily" as shorthand for the standup that happens every day.
+
+The official promise is 15 minutes. In reality, I almost never worked at a company where it stayed there. The common range was 30 minutes to 1 hour and 30 minutes, and that is where the math gets ugly very quickly.
 
 And once you scale that across a small startup or a larger company, you are no longer talking about a harmless meeting. You are talking about a recurring drain on human time.
 
@@ -89,7 +91,7 @@ Let’s make the assumptions explicit.
 - 5 workdays per week
 - one daily standup every workday
 - average attendance from everyone in the team
-- meeting time per person between 30 minutes and 1 hour 30 minutes per day
+- the nominal target is 15 minutes, but the real-world range is often 30 minutes to 1 hour 30 minutes per day
 
 ### Cost per engineer
 

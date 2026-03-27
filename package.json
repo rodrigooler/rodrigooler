@@ -12,6 +12,7 @@
     "generate:seo": "node scripts/generate-seo.mjs"
   },
   "dependencies": {
+    "@plausible-analytics/tracker": "^0.4.4",
     "clsx": "^2.1.1",
     "feed": "^5.2.0",
     "gray-matter": "^4.0.3",

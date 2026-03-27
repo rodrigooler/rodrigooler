@@ -1,6 +1,7 @@
 import type { Metadata, Viewport } from 'next';
 import type { ReactNode } from 'react';
 
+import { Analytics } from '@/components/analytics';
 import { SeoJsonLd } from '@/components/seo-jsonld';
 import { site } from '@/lib/site';
 import './globals.css';
@@ -84,6 +85,7 @@ export default function RootLayout({
     <html lang="en" data-scroll-behavior="smooth">
       <body className="text-white antialiased">
         <SeoJsonLd data={personJsonLd} />
+        <Analytics />
         {children}
       </body>
     </html>

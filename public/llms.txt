@@ -11,14 +11,14 @@ Senior software engineer, founder, and CTO focused on scalable products, editori
 - https://oler.pages.dev/sitemap.xml
 
 ## Recent articles
+- https://oler.pages.dev/blog/forced-synchronous-communication-is-the-real-problem — Why some agile rituals create calendar pressure without improving coordination, and how teams can replace them with better async defaults.
+- https://oler.pages.dev/blog/hono-with-bun-for-new-projects — A practical look at Hono and Bun: where the performance comes from, who maintains them, and why they make sense for greenfield projects.
 - https://oler.pages.dev/blog/serena-mcp-for-claude-code — A short note on how to get more value from Serena when working with Claude Code, including the Claude-specific context and a practical fallback.
+- https://oler.pages.dev/blog/why-daily-standups-are-becoming-useless-in-the-ai-era — Daily standups used to be a coordination tool. Today, with better async workflows and AI-assisted status sharing, they often waste engineering time at scale.
 - https://oler.pages.dev/blog/elevenlabs-cli-agent-first-automation — Why removing interactivity as the default makes a CLI more predictable, automatable, and suitable for agent-driven workflows.
 - https://oler.pages.dev/blog/how-to-safely-remove-xcode-without-breaking-command-line-tools-clt-191l — Free up disk space on your Mac by removing Xcode while keeping Command Line Tools fully functional for development.
 - https://oler.pages.dev/blog/how-to-free-up-space-on-your-macs-ssd-256gb-1d1d — Learn how to free up space on your Mac's SSD using simple Terminal commands
 - https://oler.pages.dev/blog/fixing-dockers-malware-warning-on-mac-os-sequoia-4fl4 — A quick solution to fix Docker's malware warning on Mac OS Sequoia.
-- https://oler.pages.dev/blog/introduction-to-let-in-angular-18-cm6 — Angular 18 has an exciting new feature under development for developers: the @let directive. This tool will help you create variables quickly and easily within HTML code. It's important to note that this feature is still being developed and has not yet been merged into a release within Angular 18. Let's understand how it works and look at some cool examples of its potential use.
-- https://oler.pages.dev/blog/resolving-viewport-duplication-in-nextjs-134-51lm — An effective solution to the issue of duplicating the viewport tag in Next.js 13 when defining the viewport directly in components.
-- https://oler.pages.dev/blog/calculating-the-average-execution-price-of-market-orders-on-the-binance-api-36f8 — Learn how to calculate the average execution price for market orders using the Binance API
 
 ## Notes
 - Blog posts are written in English.

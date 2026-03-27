@@ -1,7 +1,6 @@
 import type { Metadata, Viewport } from 'next';
 import type { ReactNode } from 'react';
 
-import { Analytics } from '@/components/analytics';
 import { SeoJsonLd } from '@/components/seo-jsonld';
 import { site } from '@/lib/site';
 import './globals.css';
@@ -85,7 +84,15 @@ export default function RootLayout({
     <html lang="en" data-scroll-behavior="smooth">
       <body className="text-white antialiased">
         <SeoJsonLd data={personJsonLd} />
-        <Analytics />
+        <script async src="https://plausible.io/js/pa-ovVSeh0_C8S1Oi32J6kuU.js" />
+        <script
+          dangerouslySetInnerHTML={{
+            __html: `
+              window.plausible=window.plausible||function(){(plausible.q=plausible.q||[]).push(arguments)},plausible.init=plausible.init||function(i){plausible.o=i||{}};
+              plausible.init()
+            `,
+          }}
+        />
         {children}
       </body>
     </html>

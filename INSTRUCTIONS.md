@@ -111,20 +111,6 @@ canonical: "https://example.com/original-post"
 - Prefer static SEO-friendly rendering.
 - Do not sacrifice crawlability for unnecessary runtime rendering.
 
-## Analytics
-
-This site uses Plausible Analytics.
-
-Suggested environment variables:
-
-- `NEXT_PUBLIC_PLAUSIBLE_DOMAIN`
-
-Set them in GitHub with:
-
-```bash
-gh secret set NEXT_PUBLIC_PLAUSIBLE_DOMAIN --repo rodrigooler/rodrigooler --body "oler.pages.dev"
-```
-
 ## Deployment
 
 The project is deployed to Cloudflare Pages as a static export.

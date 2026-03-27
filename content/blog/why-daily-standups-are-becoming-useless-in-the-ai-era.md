@@ -146,6 +146,17 @@ That is the equivalent of about **18.8 to 56.3 full-time work-years** every year
 
 Put another way, a company can silently lose the output of an entire engineering department to a meeting format that was supposed to save time.
 
+## Visualizing the waste
+
+The numbers become easier to digest when you look at them as charts.
+
+![Daily standup cost per engineer over a week, month, and year](/blog/charts/daily-standup-cost-per-engineer.png)
+
+![Daily standup cost at scale for a 6-person startup versus a 300-person company](/blog/charts/daily-standup-cost-at-scale.png)
+
+The point is not that every meeting destroys productivity by itself.
+The point is that small daily costs compound into a very large annual tax when they are multiplied by every engineer on the team.
+
 ## Why it was already inefficient before AI
 
 The uncomfortable truth is that many teams never used standups well.

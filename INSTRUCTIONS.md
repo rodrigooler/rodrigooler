@@ -60,7 +60,7 @@ flowchart TD
 
 ```text
 app/            Next.js routes and page templates
-components/     Shared UI, blog blocks, translators, SEO helpers
+components/     Shared UI, blog blocks, SEO helpers
 content/blog/   Source Markdown posts
 lib/            Blog loading and site helpers
 public/         Static assets and generated SEO files
@@ -131,16 +131,6 @@ Deployment is handled by GitHub Actions:
 Workflow file:
 
 - [.github/workflows/deploy-cloudflare-pages.yml](.github/workflows/deploy-cloudflare-pages.yml)
-
-## Translation
-
-The blog supports in-page translation without redirecting the user away from the site.
-
-Rules:
-
-- translate inside the page
-- do not send users to Google Translate
-- keep the default browser language as the target when possible
 
 ## Project Rules
 

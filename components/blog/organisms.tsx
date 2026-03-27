@@ -1,7 +1,6 @@
 import Link from 'next/link';
 
 import { Breadcrumbs } from '@/components/breadcrumbs';
-import { ArticleTranslator } from '@/components/article-translator';
 import { BlogBackground, BlogHeader, SectionLabel } from '@/components/blog/atoms';
 import { ArticleCard, Marquee, TagPill, TerminalPreview } from '@/components/blog/molecules';
 import { formatPostDate, slugifyTag } from '@/lib/blog';
@@ -333,7 +332,39 @@ export function BlogPostPage({
       <section className="px-[5vw] pt-24 pb-[100px] lg:px-[8vw]">
         <div className="mx-auto max-w-[980px]">
           {breadcrumbs.length ? <Breadcrumbs items={breadcrumbs} /> : null}
-          <ArticleTranslator post={post} />
+          <article className="rounded-[16px] border border-[rgba(0,255,200,0.12)] bg-[rgba(8,11,20,0.88)] p-7 sm:p-8 shadow-[0_0_0_1px_rgba(255,255,255,0.03)_inset]">
+            <div className="mb-8 border-b border-[rgba(255,255,255,0.06)] pb-6">
+              <div className="max-w-3xl">
+                <h1 className="font-display text-[clamp(2.4rem,4vw,4.6rem)] font-extrabold leading-[0.95] tracking-[-0.03em]">
+                  {post.title}
+                </h1>
+                <p className="mt-5 max-w-3xl text-[1rem] leading-[1.7] text-[color:var(--muted)]">{post.description}</p>
+                <div className="mt-5 flex flex-wrap items-center gap-3 font-mono text-[0.78rem] text-[color:var(--muted)]">
+                  <span>{formatPostDate(post.date)}</span>
+                  <span className="text-[color:var(--muted-2)]">|</span>
+                  <span>{post.readingTime}</span>
+                  <span className="text-[color:var(--muted-2)]">|</span>
+                  <span>Markdown source</span>
+                </div>
+                <div className="mt-5 flex flex-wrap gap-2">
+                  {post.tags.map((tag) => (
+                    <Link
+                      key={tag}
+                      href={`/blog/tags/${slugifyTag(tag)}`}
+                      className="rounded-[999px] border border-[rgba(0,255,200,0.15)] bg-[rgba(0,255,200,0.07)] px-[10px] py-[4px] font-mono text-[0.68rem] text-[color:var(--neon)]"
+                    >
+                      {tag}
+                    </Link>
+                  ))}
+                </div>
+              </div>
+            </div>
+
+            <div
+              className="prose prose-invert max-w-none prose-headings:font-display prose-p:leading-8 prose-li:leading-8 prose-a:text-[color:var(--neon)]"
+              dangerouslySetInnerHTML={{ __html: post.contentHtml }}
+            />
+          </article>
 
           {relatedPosts.length ? (
             <section className="mt-16">

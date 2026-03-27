@@ -23,10 +23,9 @@ This repository is a Next.js blog and portfolio for Rodrigo Oler.
 ## Deployment Rules
 - Cloudflare Pages deployment should use static export, not Workers/SSR.
 - If a feature requires runtime server execution, do not assume it is deployable on Cloudflare Pages without Workers.
-- Client-side translation is allowed if it keeps the site static.
+- Keep the site English-only unless explicitly asked otherwise.
 
 ## Engineering Rules
-- Avoid Google Translate redirects for blog content.
 - Prefer small, focused commits.
 - Do not revert user changes unless explicitly asked.
 - Keep the output stable and the layout unchanged unless the task is a visual refactor.

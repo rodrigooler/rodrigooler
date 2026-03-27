@@ -57,7 +57,13 @@ export function ArticleCard({ post }: { post: BlogPostMeta }) {
   );
 }
 
-export function TerminalPreview({ posts }: { posts: BlogPostMeta[] }) {
+export function TerminalPreview({
+  posts,
+  totalPosts,
+}: {
+  posts: BlogPostMeta[];
+  totalPosts: number;
+}) {
   return (
     <div className="w-full max-w-[520px]">
       <div className="mb-4 overflow-hidden rounded-[12px] border border-[color:var(--border)] bg-[rgba(4,7,18,0.97)] shadow-[0_40px_80px_rgba(0,0,0,0.7),0_0_0_1px_rgba(255,255,255,0.03)_inset,0_0_60px_rgba(0,255,200,0.04)]">
@@ -69,9 +75,9 @@ export function TerminalPreview({ posts }: { posts: BlogPostMeta[] }) {
         </div>
         <div className="space-y-2 p-5 font-mono text-[0.82rem] leading-[1.75]">
           <p className="text-[color:var(--neon)]">rodrigo@oler:~$ blog status</p>
-          <p className="text-white">articles: {posts.length}</p>
+          <p className="text-white">articles: {totalPosts}</p>
           <p className="text-[color:var(--muted)]">focus: SEO, React, TailwindCSS, content systems</p>
-          <p className="text-[color:var(--magenta)]">publish mode: daily</p>
+          <p className="text-[color:var(--magenta)]">publish mode: static export</p>
           <p className="text-[color:var(--amber)]">current pipeline: Markdown {"->"} build {"->"} sitemap/rss</p>
           <div className="pt-2">
             {posts.slice(0, 4).map((post) => (
@@ -89,11 +95,11 @@ export function TerminalPreview({ posts }: { posts: BlogPostMeta[] }) {
       <div className="grid grid-cols-2 gap-3">
         <div className="rounded-[8px] border border-[color:var(--border)] bg-[var(--card)] p-4">
           <p className="mb-1 font-mono text-[0.68rem] uppercase tracking-[1px] text-[color:var(--muted)]">Posts</p>
-          <p className="font-display text-[1.1rem] font-bold text-[color:var(--neon)]">{posts.length}</p>
+          <p className="font-display text-[1.1rem] font-bold text-[color:var(--neon)]">{totalPosts}</p>
         </div>
         <div className="rounded-[8px] border border-[color:var(--border)] bg-[var(--card)] p-4">
           <p className="mb-1 font-mono text-[0.68rem] uppercase tracking-[1px] text-[color:var(--muted)]">Mode</p>
-          <p className="font-display text-[1.1rem] font-bold text-[color:var(--neon)]">React</p>
+          <p className="font-display text-[1.1rem] font-bold text-[color:var(--neon)]">Next.js</p>
         </div>
         <div className="rounded-[8px] border border-[color:var(--border)] bg-[var(--card)] p-4">
           <p className="mb-1 font-mono text-[0.68rem] uppercase tracking-[1px] text-[color:var(--muted)]">SEO</p>

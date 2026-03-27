@@ -35,7 +35,8 @@ export default async function Page({ params }: { params: Params }) {
     notFound();
   }
 
-  const [pageData, tags] = await Promise.all([
+  const [allPosts, pageData, tags] = await Promise.all([
+    getAllPosts(),
     getPaginatedPosts(pageNumber),
     getAllTags(),
   ]);
@@ -47,9 +48,11 @@ export default async function Page({ params }: { params: Params }) {
   return (
     <BlogIndexPage
       posts={pageData.posts}
+      latestPosts={allPosts.slice(0, 4)}
       tags={tags}
       currentPage={pageData.page}
       totalPages={pageData.totalPages}
+      totalPosts={pageData.totalPosts}
       breadcrumbs={[
         { label: 'Home', href: '/' },
         { label: 'Blog', href: '/blog' },

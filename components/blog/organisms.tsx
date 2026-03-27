@@ -7,15 +7,21 @@ import { formatPostDate, slugifyTag } from '@/lib/blog';
 import type { BlogPost, BlogPostMeta } from '@/lib/blog';
 import type { BreadcrumbItem } from '@/components/breadcrumbs';
 
-function BlogHero({ posts }: { posts: BlogPostMeta[] }) {
-  const latest = posts[0];
+function BlogHero({
+  totalPosts,
+  latestPosts,
+}: {
+  totalPosts: number;
+  latestPosts: BlogPostMeta[];
+}) {
+  const latest = latestPosts[0];
 
   return (
     <section className="grid min-h-screen grid-cols-1 gap-0 pt-16 lg:grid-cols-2">
       <div className="flex flex-col justify-center px-[5vw] py-20 lg:px-[8vw] lg:py-20">
         <div className="mb-6 inline-flex w-fit items-center gap-2 rounded-full border border-[color:var(--border-neon)] bg-[color:var(--neon-dim)] px-[14px] py-[6px] font-mono text-[0.78rem] text-[color:var(--neon)]">
           <span className="h-[7px] w-[7px] rounded-full bg-[color:var(--neon)] shadow-[0_0_8px_var(--neon)]" />
-          Publishing daily
+          Publishing from Git
         </div>
         <h1 className="mb-4 font-display text-[clamp(3rem,5.5vw,5rem)] font-extrabold leading-[0.95] tracking-[-0.03em]">
           Writing
@@ -53,7 +59,7 @@ function BlogHero({ posts }: { posts: BlogPostMeta[] }) {
         </div>
         <div className="flex flex-wrap gap-6">
           <div className="flex flex-col">
-            <span className="font-display text-[1.8rem] font-extrabold text-white">{posts.length}</span>
+            <span className="font-display text-[1.8rem] font-extrabold text-white">{totalPosts}</span>
             <span className="font-mono text-[0.72rem] uppercase tracking-[1px] text-[color:var(--muted)]">Articles</span>
           </div>
           <span className="text-[color:var(--muted-2)]">|</span>
@@ -63,14 +69,14 @@ function BlogHero({ posts }: { posts: BlogPostMeta[] }) {
           </div>
           <span className="text-[color:var(--muted-2)]">|</span>
           <div className="flex flex-col">
-            <span className="font-display text-[1.8rem] font-extrabold text-white">React</span>
+            <span className="font-display text-[1.8rem] font-extrabold text-white">Next.js</span>
             <span className="font-mono text-[0.72rem] uppercase tracking-[1px] text-[color:var(--muted)]">Stack</span>
           </div>
         </div>
       </div>
 
       <div className="flex flex-col justify-center px-[5vw] py-20 lg:px-[8vw] lg:py-20">
-        <TerminalPreview posts={posts} />
+        <TerminalPreview posts={latestPosts} totalPosts={totalPosts} />
       </div>
     </section>
   );
@@ -116,27 +122,33 @@ function PaginationControls({
 
 export function BlogIndexPage({
   posts,
+  latestPosts,
   tags,
   currentPage,
   totalPages,
+  totalPosts,
   breadcrumbs = [],
 }: {
   posts: BlogPostMeta[];
+  latestPosts: BlogPostMeta[];
   tags: Array<{ tag: string; count: number }>;
   currentPage: number;
   totalPages: number;
+  totalPosts: number;
   breadcrumbs?: BreadcrumbItem[];
 }) {
+  const isFirstPage = currentPage === 1;
+
   return (
     <main className="relative overflow-hidden">
       <BlogBackground />
       <BlogHeader />
-      <BlogHero posts={posts} />
+      <BlogHero totalPosts={totalPosts} latestPosts={latestPosts} />
       <Marquee
         items={[
           'Markdown Source',
           'SEO-first',
-          'Daily Posts',
+          'Editorial Cadence',
           'React',
           'TailwindCSS',
           'Canonical URLs',
@@ -147,13 +159,14 @@ export function BlogIndexPage({
 
       <section className="px-[5vw] py-[100px] lg:px-[8vw]">
         {breadcrumbs.length ? <Breadcrumbs items={breadcrumbs} /> : null}
-        <SectionLabel>Latest Posts</SectionLabel>
+        <SectionLabel>{isFirstPage ? 'Latest Posts' : 'More Posts'}</SectionLabel>
         <h2 className="mb-4 font-display text-[clamp(2rem,3.5vw,3rem)] font-extrabold leading-[1.05] tracking-[-0.02em]">
-          Where the archive starts.
+          {isFirstPage ? 'Where the archive starts.' : 'Older entries from the archive.'}
         </h2>
         <p className="mb-12 max-w-[560px] text-[1rem] leading-[1.6] text-[color:var(--muted)]">
-          Fresh articles, republished notes, and evergreen technical posts. The list is generated from Markdown at build
-          time.
+          {isFirstPage
+            ? 'Fresh articles, republished notes, and evergreen technical posts. The list is generated from Markdown at build time.'
+            : 'This page continues the archive with older posts generated from Markdown at build time.'}
         </p>
 
         <div className="grid gap-4 md:grid-cols-2 xl:grid-cols-3">

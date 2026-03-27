@@ -1,7 +1,7 @@
 import type { Metadata } from 'next';
 
 import { BlogIndexPage } from '@/components/blog-page';
-import { getAllTags, getPaginatedPosts } from '@/lib/blog';
+import { getAllPosts, getAllTags, getPaginatedPosts } from '@/lib/blog';
 import { site } from '@/lib/site';
 
 export const metadata: Metadata = {
@@ -13,14 +13,16 @@ export const metadata: Metadata = {
 };
 
 export default async function Page() {
-  const [pageData, tags] = await Promise.all([getPaginatedPosts(1), getAllTags()]);
+  const [allPosts, pageData, tags] = await Promise.all([getAllPosts(), getPaginatedPosts(1), getAllTags()]);
 
   return (
     <BlogIndexPage
       posts={pageData.posts}
+      latestPosts={allPosts.slice(0, 4)}
       tags={tags}
       currentPage={pageData.page}
       totalPages={pageData.totalPages}
+      totalPosts={pageData.totalPosts}
       breadcrumbs={[
         { label: 'Home', href: '/' },
         { label: 'Blog', href: '/blog' },

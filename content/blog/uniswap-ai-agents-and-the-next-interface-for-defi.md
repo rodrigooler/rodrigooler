@@ -15,6 +15,8 @@ The interesting part is not the command line sugar or the novelty of combining D
 
 The interesting part is what it implies: more and more onchain actions may be initiated by software agents, not by humans sitting in front of a UI and clicking through every step.
 
+If you build around this seriously, you are not wiring a chatbot to a swap button. You are wiring a policy engine to a real execution stack: quote, route, approval, slippage, gas, calldata, and auditability.
+
 In other words, the interface is shifting.
 
 ## What the announcement is really saying
@@ -54,9 +56,9 @@ Uniswap’s Trading API is positioned as a production-grade integration layer th
 - supports crosschain swap flows on supported networks
 - covers swaps and LP workflows across multiple chains
 
-That is a strong signal. It means the agent layer is not being bolted onto a toy demo. It is being built on top of a real execution stack.
+That is a strong signal. It means the agent layer is not being bolted onto a toy demo. It is being built on top of a real execution stack designed for production constraints, not just conversational novelty.
 
-The Warden case study makes that even more concrete. According to Uniswap, Warden’s AI agent scaled to 650,000+ swaps for over 500,000 users across 14 chains, with the team moving from first call to production in under 72 hours.
+The Warden case study makes that even more concrete. According to Uniswap, Warden scaled to 650,000+ swaps for over 500,000 users across 14 chains. The same post says the team went from first call to production in under 72 hours and offloaded routing, gas optimization, and slippage logic to Uniswap’s infrastructure.
 
 That is the kind of number that changes the discussion from “interesting prototype” to “new operating model.”
 

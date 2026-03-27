@@ -182,4 +182,3 @@ If you are evaluating deployment options:
 - Run `npm run typecheck` before merging.
 - Run `npm run build` before publishing.
 - Check that `sitemap.xml`, `rss.xml`, and `robots.txt` are regenerated when content changes.
-

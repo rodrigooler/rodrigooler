@@ -4,6 +4,7 @@ description: "Daily standups used to be a coordination tool. Today, with better 
 date: "2026-03-26"
 tags: ["agile", "standup", "ai", "productivity", "engineering"]
 readingTime: "6 min read"
+ogImage: "/og-images/why-daily-standups-are-becoming-useless-in-the-ai-era.png"
 featured: false
 ---
 

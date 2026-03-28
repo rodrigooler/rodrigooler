@@ -36,7 +36,7 @@ export async function generateMetadata({ params }: { params: Params }): Promise<
       modifiedTime: post.lastModified,
       images: [
         {
-          url: `/og-images/${post.slug}.svg`,
+          url: post.ogImage ?? `/og-images/${post.slug}.png`,
           width: 1200,
           height: 630,
           alt: post.title,
@@ -47,7 +47,7 @@ export async function generateMetadata({ params }: { params: Params }): Promise<
       card: 'summary_large_image',
       title: post.title,
       description: post.description,
-      images: [`/og-images/${post.slug}.svg`],
+      images: [post.ogImage ?? `/og-images/${post.slug}.png`],
     },
   };
 }

@@ -17,6 +17,7 @@ export type PostFrontmatter = {
   date: string;
   tags: string[];
   canonical?: string;
+  ogImage?: string;
   featured?: boolean;
   draft?: boolean;
 };
@@ -73,6 +74,7 @@ function parseFrontmatter(filePath: string) {
       date: frontmatter.date,
       tags: frontmatter.tags,
       canonical: frontmatter.canonical,
+      ogImage: frontmatter.ogImage,
       featured: frontmatter.featured,
       draft: frontmatter.draft,
       readingTime: stats.text,
@@ -167,6 +169,7 @@ export function formatPostDate(date: string) {
     year: 'numeric',
     month: 'long',
     day: 'numeric',
+    timeZone: 'UTC',
   }).format(new Date(date));
 }
 

@@ -3,6 +3,7 @@ import path from 'node:path';
 
 import matter from 'gray-matter';
 import { Feed } from 'feed';
+import sharp from 'sharp';
 
 const root = process.cwd();
 const postsDirectory = path.join(root, 'content/blog');
@@ -116,11 +117,28 @@ async function writeFile(filePath, content) {
   await fs.writeFile(filePath, content, 'utf8');
 }
 
+async function cleanOgImageDirectory() {
+  try {
+    const entries = await fs.readdir(ogDirectory);
+    await Promise.all(
+      entries
+        .filter((file) => file.endsWith('.svg'))
+        .map((file) => fs.rm(path.join(ogDirectory, file), { force: true })),
+    );
+  } catch {
+    // Ignore missing directories; they are created on demand.
+  }
+}
+
 function buildOgImage(post) {
-  const lines = wrapText(post.title, 26, 3);
+  const lines = wrapText(post.title, 22, 3);
   const tagLine = post.tags.slice(0, 4).join(' · ').toUpperCase();
   const safeDescription = escapeXml(post.description);
   const safeTags = escapeXml(tagLine);
+  const titleFontSize = lines.length === 1 ? 60 : lines.length === 2 ? 54 : 48;
+  const titleLineGap = lines.length === 1 ? 78 : lines.length === 2 ? 72 : 66;
+  const titleTop = lines.length === 1 ? 292 : lines.length === 2 ? 276 : 260;
+  const descriptionTop = lines.length === 1 ? 520 : lines.length === 2 ? 524 : 528;
 
   return `<?xml version="1.0" encoding="UTF-8"?>
 <svg width="1200" height="630" viewBox="0 0 1200 630" fill="none" xmlns="http://www.w3.org/2000/svg">
@@ -141,11 +159,22 @@ function buildOgImage(post) {
   <text x="80" y="142" fill="#00ffc8" font-family="Inter, Arial, sans-serif" font-size="24" letter-spacing="4">RODRIGO OLER</text>
   <text x="80" y="186" fill="#6e7a9f" font-family="Inter, Arial, sans-serif" font-size="18">${escapeXml(siteTitle)} · blog</text>
   ${lines
-    .map((line, index) => `<text x="80" y="${280 + index * 74}" fill="#e8eeff" font-family="Inter, Arial, sans-serif" font-size="56" font-weight="800">${escapeXml(line)}</text>`)
+    .map(
+      (line, index) =>
+        `<text x="80" y="${titleTop + index * titleLineGap}" fill="#e8eeff" font-family="Inter, Arial, sans-serif" font-size="${titleFontSize}" font-weight="800">${escapeXml(line)}</text>`,
+    )
     .join('\n  ')}
-  <text x="80" y="520" fill="#6e7a9f" font-family="IBM Plex Mono, monospace" font-size="18">${safeDescription}</text>
+  <text x="80" y="${descriptionTop}" fill="#6e7a9f" font-family="IBM Plex Mono, monospace" font-size="18">${safeDescription}</text>
   <text x="80" y="560" fill="#00ffc8" font-family="IBM Plex Mono, monospace" font-size="16" letter-spacing="1.5">${safeTags}</text>
 </svg>`;
+}
+
+async function writeOgImage(post) {
+  const filePath = path.join(ogDirectory, `${post.slug}.png`);
+  const svg = buildOgImage(post);
+
+  await fs.mkdir(ogDirectory, { recursive: true });
+  await sharp(Buffer.from(svg)).png().toFile(filePath);
 }
 
 async function buildSitemap(posts) {
@@ -187,10 +216,14 @@ async function buildSitemap(posts) {
 
   urls.push(...tagMap.values());
 
-  const xml = `<?xml version="1.0" encoding="UTF-8"?>\n` +
+  const xml =
+    `<?xml version="1.0" encoding="UTF-8"?>\n` +
     `<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">\n` +
     urls
-      .map((entry) => `  <url><loc>${entry.loc}</loc><lastmod>${entry.lastmod}</lastmod><changefreq>weekly</changefreq><priority>${entry.loc.endsWith('/blog') ? '0.9' : entry.loc.endsWith('/cv') ? '0.7' : '0.8'}</priority></url>`)
+      .map(
+        (entry) =>
+          `  <url><loc>${entry.loc}</loc><lastmod>${entry.lastmod}</lastmod><changefreq>weekly</changefreq><priority>${entry.loc.endsWith('/blog') ? '0.9' : entry.loc.endsWith('/cv') ? '0.7' : '0.8'}</priority></url>`,
+      )
       .join('\n') +
     `\n</urlset>\n`;
 
@@ -262,13 +295,15 @@ function buildLlmTxt(posts) {
 async function main() {
   const posts = await readPosts();
 
+  await cleanOgImageDirectory();
+
   await writeFile(path.join(publicDirectory, 'robots.txt'), buildRobots());
   await writeFile(path.join(publicDirectory, 'sitemap.xml'), await buildSitemap(posts));
   await writeFile(path.join(publicDirectory, 'rss.xml'), buildFeed(posts));
   await writeFile(path.join(publicDirectory, 'llms.txt'), buildLlmTxt(posts));
 
   for (const post of posts) {
-    await writeFile(path.join(ogDirectory, `${post.slug}.svg`), buildOgImage(post));
+    await writeOgImage(post);
   }
 }
 

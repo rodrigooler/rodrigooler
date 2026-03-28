@@ -21,3 +21,9 @@
 - Do not delete or rewrite user changes unless explicitly requested.
 - Prefer small, reviewable commits.
 - Validate with `typecheck` and `build` after meaningful changes.
+
+## Commits
+- Use Conventional Commits: `type(scope): subject`.
+- Prefer `feat`, `fix`, `chore`, `refactor`, `docs`, and `test`.
+- Keep the subject short, imperative, and lowercase after the colon.
+- Use a scope when it helps clarify the area changed, such as `blog`, `seo`, or `ui`.

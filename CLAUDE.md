@@ -29,3 +29,9 @@ This repository is a Next.js blog and portfolio for Rodrigo Oler.
 - Prefer small, focused commits.
 - Do not revert user changes unless explicitly asked.
 - Keep the output stable and the layout unchanged unless the task is a visual refactor.
+
+## Commit Style
+- Use Conventional Commits: `type(scope): subject`.
+- Prefer `feat`, `fix`, `chore`, `refactor`, `docs`, and `test`.
+- Keep the subject concise, imperative, and lowercase after the colon.
+- Add a short scope when it improves clarity, such as `blog`, `seo`, or `ci`.

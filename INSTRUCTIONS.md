@@ -21,6 +21,7 @@ Other useful commands:
 npm run build
 npm run typecheck
 npm run generate:seo
+npm run sync:devto
 ```
 
 ## What This Project Is
@@ -73,6 +74,7 @@ public/         Static assets and generated SEO files
 2. Add frontmatter with the post metadata.
 3. Run `npm run build` or `npm run generate:seo`.
 4. The blog pages, RSS feed, sitemap, and robots file are regenerated from the same source.
+5. If `DEVTO_API_KEY` is set, the build also mirrors eligible posts to DEV.to after the static site build finishes.
 
 ### Post Rules
 
@@ -127,6 +129,7 @@ Deployment is handled by GitHub Actions:
 
 - build the static site
 - deploy the `out/` directory to Cloudflare Pages
+- mirror eligible blog posts to DEV.to after the build when `DEVTO_API_KEY` is available
 
 Workflow file:
 
@@ -172,3 +175,4 @@ If you are evaluating deployment options:
 - Run `npm run typecheck` before merging.
 - Run `npm run build` before publishing.
 - Check that `sitemap.xml`, `rss.xml`, and `robots.txt` are regenerated when content changes.
+- If you want DEV.to mirroring, set `DEVTO_API_KEY` and optionally `DEVTO_USERNAME`.

@@ -7,9 +7,11 @@
     "predev": "npm run generate:seo",
     "dev": "next dev",
     "build": "npm run generate:seo && next build",
+    "postbuild": "npm run sync:devto",
     "start": "next start",
     "typecheck": "tsc --noEmit",
-    "generate:seo": "node scripts/generate-seo.mjs"
+    "generate:seo": "node scripts/generate-seo.mjs",
+    "sync:devto": "node scripts/sync-devto.mjs"
   },
   "dependencies": {
     "clsx": "^2.1.1",

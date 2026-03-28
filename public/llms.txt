@@ -11,6 +11,7 @@ Senior software engineer, founder, and CTO focused on scalable products, editori
 - https://oler.pages.dev/sitemap.xml
 
 ## Recent articles
+- https://oler.pages.dev/blog/pyth-oracle-integration-with-bun-and-elysia — A practical look at Pyth price feeds, Hermes, and how to expose them through a small Bun + TypeScript + Elysia REST API.
 - https://oler.pages.dev/blog/uniswap-ai-agents-and-the-next-interface-for-defi — A recent Uniswap AI SDK announcement hints at a bigger shift: DeFi workflows may increasingly be executed by agents instead of humans clicking through interfaces.
 - https://oler.pages.dev/blog/how-to-deploy-a-static-nextjs-site-with-cloudflare-and-github-actions — A practical guide to shipping a static Next.js site on Cloudflare Pages with GitHub Actions, plus a safe way to store deployment secrets.
 - https://oler.pages.dev/blog/forced-synchronous-communication-is-the-real-problem — Why some agile rituals create calendar pressure without improving coordination, and how teams can replace them with better async defaults.
@@ -18,7 +19,6 @@ Senior software engineer, founder, and CTO focused on scalable products, editori
 - https://oler.pages.dev/blog/hono-with-bun-for-new-projects — A practical look at Hono and Bun: where the performance comes from, who maintains them, and why they make sense for greenfield projects.
 - https://oler.pages.dev/blog/serena-mcp-for-claude-code — A short note on how to get more value from Serena when working with Claude Code, including the Claude-specific context and a practical fallback.
 - https://oler.pages.dev/blog/elevenlabs-cli-agent-first-automation — Why removing interactivity as the default makes a CLI more predictable, automatable, and suitable for agent-driven workflows.
-- https://oler.pages.dev/blog/how-to-safely-remove-xcode-without-breaking-command-line-tools-clt-191l — Free up disk space on your Mac by removing Xcode while keeping Command Line Tools fully functional for development.
 
 ## Notes
 - Blog posts are written in English.

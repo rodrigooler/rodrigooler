@@ -21,8 +21,22 @@ function sanitizeText(value = '') {
   return String(value).replace(/\s+/g, ' ').replace(/\\"/g, '"').replace(/"+$/g, '').trim();
 }
 
+function normalizeDevToTag(tag) {
+  return String(tag).toLowerCase().replace(/[^a-z0-9]/g, '');
+}
+
 function absolutizeRelativeLinks(markdown, siteUrl) {
   return markdown.replace(/(!?\[[^\]]*\])\((\/[^)\s]+)\)/g, (_, prefix, target) => `${prefix}(${siteUrl}${target})`);
+}
+
+function appendBlogLinkFooter(markdown, articleUrl) {
+  const footer = `\n\n---\n\nOriginally published on [my blog](${articleUrl}).`;
+
+  if (String(markdown).includes(articleUrl) || String(markdown).includes('Originally published on [my blog](')) {
+    return String(markdown);
+  }
+
+  return `${String(markdown).trimEnd()}${footer}`;
 }
 
 function isDevToImport(data) {
@@ -60,17 +74,17 @@ async function getLocalPosts(siteUrl) {
     if (isDevToImport(data)) continue;
     if (!data.title || !data.description || !data.date || !Array.isArray(data.tags)) continue;
 
-    const tags = [...new Set(data.tags)].slice(0, 4);
+    const tags = [...new Set(data.tags.map(normalizeDevToTag).filter(Boolean))].slice(0, 4);
     const canonicalUrl = data.canonical || `${siteUrl}/blog/${slug}`;
-    const mainImage = data.coverImage || data.cover_image || `${siteUrl}/og-images/${slug}.svg`;
-    const body = absolutizeRelativeLinks(stripFrontmatter(content), siteUrl);
+    const blogUrl = `${siteUrl}/blog/${slug}`;
+    const devtoSource = typeof data.devtoBody === 'string' && data.devtoBody.trim() ? data.devtoBody : stripFrontmatter(content);
+    const body = appendBlogLinkFooter(absolutizeRelativeLinks(devtoSource, siteUrl), blogUrl);
 
     posts.push({
       slug,
       title: sanitizeText(data.title),
       description: sanitizeText(data.description),
       canonicalUrl,
-      mainImage,
       tags,
       body,
     });
@@ -92,7 +106,6 @@ async function syncArticle({ apiKey, username, siteUrl, article, existing }) {
       published: true,
       tags: article.tags,
       canonical_url: article.canonicalUrl,
-      main_image: article.mainImage,
       description: article.description,
     },
   };
@@ -134,6 +147,12 @@ async function main() {
   const apiKey = process.env.DEVTO_API_KEY;
   const username = process.env.DEVTO_USERNAME || 'oler';
   const strict = process.env.DEVTO_SYNC_STRICT === '1';
+  const syncSlugs = new Set(
+    String(process.env.DEVTO_SYNC_SLUGS || '')
+      .split(',')
+      .map((slug) => slug.trim())
+      .filter(Boolean),
+  );
 
   if (!apiKey) {
     console.log('[dev.to] DEVTO_API_KEY not set, skipping sync.');
@@ -143,17 +162,18 @@ async function main() {
   const site = await loadSite();
   const siteUrl = site.url || 'https://oler.pages.dev';
   const localPosts = await getLocalPosts(siteUrl);
+  const filteredPosts = syncSlugs.size ? localPosts.filter((article) => syncSlugs.has(article.slug)) : localPosts;
   const remoteArticles = await getDevToArticles(username);
   const remoteBySlug = new Map(remoteArticles.map((article) => [article.slug, article]));
 
-  if (!localPosts.length) {
+  if (!filteredPosts.length) {
     console.log('[dev.to] No eligible local posts found.');
     return;
   }
 
   const results = [];
 
-  for (const article of localPosts) {
+  for (const article of filteredPosts) {
     try {
       const existing = remoteBySlug.get(article.slug);
       const result = await syncArticle({

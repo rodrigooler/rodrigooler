@@ -20,6 +20,7 @@ export type PostFrontmatter = {
   ogImage?: string;
   featured?: boolean;
   draft?: boolean;
+  devtoBody?: string;
 };
 
 export type BlogPostMeta = PostFrontmatter & {
